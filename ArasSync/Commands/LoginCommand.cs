@@ -47,23 +47,30 @@ namespace BitAddict.Aras.ArasSyncTool.Commands
             {
                 Console.Write("Please enter your Aras password: ");
 
-                Password = "";
-                ConsoleKeyInfo cki;
-                while ((cki = Console.ReadKey(true)).KeyChar != '\r')
+                try
                 {
-                    if (cki.KeyChar == '\b')
+                    Password = "";
+                    ConsoleKeyInfo cki;
+                    while ((cki = Console.ReadKey(true)).KeyChar != '\r')
                     {
-                        if (Password.Length <= 0)
-                            continue;
+                        if (cki.KeyChar == '\b')
+                        {
+                            if (Password.Length <= 0)
+                                continue;
 
-                        Console.Write("\b \b");
-                        Password = Password.Substring(0, Math.Max(0, Password.Length - 1));
+                            Console.Write("\b \b");
+                            Password = Password.Substring(0, Math.Max(0, Password.Length - 1));
+                        }
+                        else
+                        {
+                            Password += cki.KeyChar;
+                            Console.Write('*');
+                        }
                     }
-                    else
-                    {
-                        Password += cki.KeyChar;
-                        Console.Write('*');
-                    }
+                }
+                catch (InvalidOperationException e)
+                {
+                    Console.Error.WriteLine("\n\nFailed to read keys: " + e.Message);
                 }
 
                 Console.WriteLine("\n");
