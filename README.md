@@ -1,30 +1,25 @@
 # README #
 
-This repo contains ARAS Innovator PLM customizations for Consilum Marine & Safety AB.
+This repo contains tools and base classes for Aras Innovator PLM customizations.
 
-It uses common code from an upstream repo shared by several Bit Addict customers,
-which is placed in the BitAddict.Aras namespace.
+Code is developed & maintanted by Bit Addict AB, but copyright belongs to:
 
+* Consilum Marine & Safety AB
+* CPAC Systems AB
+
+This code is licensed under the MIT license, see LICENSE.txt.
 
 ### What is this repository for? ###
 
 #### Quick summary
 
-Provides company-specific extensions to the Aras Innovator PLM.
-Also provides a base kit to simplify implementing, testing and managing Aras extensions.
+Provides a base kit to simplify implementing, testing and managing Aras extensions.
 
 Aras extensions are written as C# DLLs, server-methods (C#/VB), javascript and HTML,
 as well as database objects such as custom properties, fields, actions et.al.
 
 The scripts and tools found here allows developers to import, export, implement,
 build, test and deploy Aras Extensions with relative ease.
-
-### Details
-
-This repo is available at https://bitbucket.org/bitaddict/consilium-aras-plm .
-
-The upstream repo is found at https://bitbucket.org/bitaddict/bit-addict-aras-plm .
-
 
 ### How do I get set up? ###
 
@@ -66,7 +61,7 @@ Feature commands (run in project subfolder):
 
 #### Dependencies
 
- * Visual Studio 2015
+ * Visual Studio 2017
  * Git
  * Optional: Jetbrains ReSharper VS addin (for formatting & style help)
  * Optional: EditorConfig VS addin (for consistent indentation)  - http://editorconfig.org/
@@ -115,5 +110,6 @@ inherit ArasMethod and use the custom ApplyXXX methods.
 ### Who do I talk to? ###
 
 * Marcus Sonestedt (marcus.lindblom.sonestedt@bitaddict.se)
+* Jimmy Börjesson (jimmy.borjesson@bitaddict.se)
 * Per Olsson (per.olsson@consilium.se)
 
