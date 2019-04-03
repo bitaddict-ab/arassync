@@ -19,3 +19,4 @@ ArasTools/*/log.txt
 config.xml
 *.TMP
 Packages
+_ReSharper.Caches/
