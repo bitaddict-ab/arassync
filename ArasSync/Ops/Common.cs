@@ -201,5 +201,27 @@ namespace BitAddict.Aras.ArasSyncTool.Ops
             return ArasExtensions.GetNewInnovator(
                 arasDb.Url, arasDb.DbName, loginInfo.Username, loginInfo.Password);
         }
+
+        /// <summary>
+        /// Check if file exists on PATH 
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static bool ExistsOnPath(string fileName)
+        {
+            return GetFullPath(fileName) != null;
+        }
+
+        private static string GetFullPath(string fileName)
+        {
+            if (File.Exists(fileName))
+                return Path.GetFullPath(fileName);
+
+            var values = Environment.GetEnvironmentVariable("PATH") ?? "";
+
+            return values.Split(';')
+                .Select(path => Path.Combine(path, fileName))
+                .FirstOrDefault(File.Exists);
+        }
     }
 }
