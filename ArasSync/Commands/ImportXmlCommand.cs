@@ -45,6 +45,10 @@ namespace BitAddict.Aras.ArasSyncTool.Commands
 
             foreach (var fragment in data.XmlFragments)
             {
+                if (fragment.RemoteFile == null)
+                    throw new InvalidOperationException(nameof(fragment.RemoteFile) + " is empty for in " +
+                                                        fragment.Nodes.First().File);
+
                 var remoteFilePath = Path.Combine(arasDb.BinFolder, fragment.RemoteFile);
                 var localFilePath = Path.GetTempFileName();
 
