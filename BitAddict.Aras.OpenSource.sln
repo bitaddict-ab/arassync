@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArasSync", "ArasSync\ArasSync.csproj", "{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitAddict.Aras", "BitAddict.Aras\BitAddict.Aras.csproj", "{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitAddict.Aras.Test", "BitAddict.Aras\BitAddict.Aras.Test\BitAddict.Aras.Test.csproj", "{0F6591DA-929C-4CA6-9268-5FFF8C09D59F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6591DA-929C-4CA6-9268-5FFF8C09D59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6591DA-929C-4CA6-9268-5FFF8C09D59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6591DA-929C-4CA6-9268-5FFF8C09D59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6591DA-929C-4CA6-9268-5FFF8C09D59F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {832E2A81-AA5A-4415-BEF3-9496F9D19413}
+	EndGlobalSection
+EndGlobal
