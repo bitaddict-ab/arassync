@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using ManyConsole;
@@ -31,10 +32,9 @@ namespace BitAddict.Aras.ArasSyncTool
 
                 while (stack.Any())
                 {
-                    var e = stack.Pop();                
-                    var ae = e as AggregateException;
+                    var e = stack.Pop();
 
-                    if (ae != null)
+                    if (e is AggregateException ae)
                     {
                         foreach(var ie in ae.InnerExceptions)
                             stack.Push(ie);
@@ -49,6 +49,9 @@ namespace BitAddict.Aras.ArasSyncTool
                         stack.Push(e.InnerException);
                     }
                 }
+
+                if (Debugger.IsAttached)
+                    Debugger.Break();
 
                 return 3;
             }
