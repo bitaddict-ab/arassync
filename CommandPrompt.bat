@@ -42,6 +42,8 @@ IF NOT EXIST "%NUGET_EXE%" (
   title Aras Development Command Prompt - %CD%
 )
 
+attrib +h %~dp0\.nuget
+
 :: Restore nuget packages
 
 cd %~dp0\..\
