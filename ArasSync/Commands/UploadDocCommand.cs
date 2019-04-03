@@ -1,12 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Reflection;
-using System.Security.AccessControl;
-using System.Threading;
 using BitAddict.Aras.ArasSyncTool.Ops;
-using BitAddict.Aras.Data;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
@@ -82,7 +78,7 @@ namespace BitAddict.Aras.ArasSyncTool.Commands
         {
             Console.WriteLine($"\nGenerating documentation ...");
 
-            var docuExe = Path.Combine(Config.SolutionDir.FullName, "Core", "docu", "docu.exe");
+            var docuExe = Path.Combine(Config.SolutionDir.FullName, "Docu", "docu.exe");
             string outputDummy = null;
             return Common.RunProcess(docuExe, false, ref outputDummy,
                 Path.Combine(sourceFolder, "*.Aras*.dll"),
