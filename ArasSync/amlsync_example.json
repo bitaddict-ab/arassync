@@ -1,0 +1,69 @@
+{
+    "AmlFragments":
+    [
+        {
+            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Form\\Custom_ManageFloatingDocuments.xml",
+            "nodes": [
+                {
+                    "file": "Aras\\Form_ManageFloatingDocuments_Javascript.html",
+                    "xpath": "//Item[@type='Field' and name='_Javascript']/html_code"
+                },
+                {
+                    "file": "Aras\\Form_ManageFloatingDocuments_FloatDoc.html",
+                    "xpath": "//Item[@type='Field' and name='floatDoc']/html_code"
+                }
+            ]
+        },
+        {
+            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_AddFloatClient.xml",
+            "nodes": [
+                {
+                    "file": "Aras\\Method_Custom_AddFloatClient.js",
+                    "xpath": "//method_code"
+                }
+            ]
+        },
+        {
+            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_AddFloatServer.xml",
+            "nodes": [
+                {
+                    "file": "Aras\\Method_Custom_AddFloatServer.cs",
+                    "xpath": "//method_code"
+                }
+            ]
+        },
+        {
+            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_RemoveFloatServer.xml",
+            "nodes": [
+                {
+                    "file": "Aras\\Method_Custom_RemoveFloatServer.cs",
+                    "xpath": "//method_code"
+                }
+            ]
+        }
+    ],
+    "XmlFragments": [
+        {
+            "RemoteFile": "Innovator\\Server\\method-config.xml",
+            "Nodes": [
+                {
+                    "file": "IncludeNamespaceConfig\\Custom_Structure.xml",
+                    "existencexpath": "/IncludeNamespaces/JavaScriptNamespace/class[@name='Custom_Structure']",
+                    "additionxpath": "/IncludeNamespaces/JavaScriptNamespace"
+                },
+                {
+                    "fragment": "<name>$(binpath)/BitAddict.Aras.Dll</name>",
+                    "existencexpath": "//MethodConfig/ReferencedAssemblies/name[text()='$(binpath)/BitAddict.Aras.Dll']",
+                    "additionxpath": "//MethodConfig/ReferencedAssemblies"
+                }
+            ]
+        }
+    ],
+    "ServerFiles": [
+        {
+            "local": "InBasket\\InBasket-VoteDialog.aspx",
+            "remote": "Innovator\\Client\\scripts\\InBasket\\InBasket-VoteDialog.aspx"
+        }
+    ]
+
+}

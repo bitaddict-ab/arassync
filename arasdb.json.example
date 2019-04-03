@@ -1,0 +1,23 @@
+{
+  "DevelopmentInstance": "LOCAL",
+  "instances": [
+    {
+      "id": "LOCAL",
+      "url": "http://localhost/innovatorServer",
+      "dbname": "InnovatorSample",
+      "binFolder": "C:\\Program Files (x86)\\Aras\\Innovator"
+    }
+  ],
+  "CopyDll": {
+    "Extensions": [ ".dll", ".pdb" ],
+    "Excludes": [
+      "Aras.Diagnostics",
+      "Aras.Net",
+      "IOM",
+      "InnovatorCore",
+      "Test",
+      "UnitTestFramework",
+      "JetBrains.Annotations",
+    ]
+  }
+}
