@@ -20,3 +20,5 @@ config.xml
 *.TMP
 Packages
 _ReSharper.Caches/
+nunit-report.xml
+nunit-report.html
