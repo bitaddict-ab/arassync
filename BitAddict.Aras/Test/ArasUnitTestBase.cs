@@ -69,10 +69,13 @@ namespace BitAddict.Aras.Test
             if (loginInfo == null)
                 throw new ArasException("No user logged in. Cannot run tests against Aras.");
 
-            var slnDir = Directory.GetParent(ctx.TestRunDirectory).Parent;
-            if (slnDir == null)
-                throw new ArasException("Unit test not run from within Visual studio?");
+            var slnDir = ctx.TestRunDirectory;
+            while (slnDir != null && !Directory.EnumerateFiles(slnDir, "*.sln").Any())
+                slnDir = Directory.GetParent(slnDir).FullName;
 
+            if (slnDir == null)
+                throw new ArasException(
+                    $"Failed to find top/solution directory in parents of {ctx.TestRunDirectory}");
             var developmentDb = GetDevelopmentDb(slnDir);
 
             Connection = IomFactory.CreateHttpServerConnection(
@@ -93,13 +96,13 @@ namespace BitAddict.Aras.Test
             ArasExtensions.LogRootFolder = LogFolder;
         }
 
-        private static ArasDb GetDevelopmentDb(FileSystemInfo slnDir)
+        private static ArasDb GetDevelopmentDb(string slnDir)
         {
             ArasDb developmentDb = null;
 
             foreach (var mfFile in new[] {"arasdb-local.json", "arasdb.json"})
             {
-                var mfFilePath = Path.Combine(slnDir.FullName, mfFile);
+                var mfFilePath = Path.Combine(slnDir, mfFile);
                 if (!File.Exists(mfFilePath))
                     continue;
 
