@@ -1,28 +1,28 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MSTestHacks;
+using NUnit.Framework;
 
 #pragma warning disable 1591
 
 namespace BitAddict.Aras.UnitTests
 {
-    [TestClass]
-    public class TestLogger : TestBase
+    [TestFixture]
+    public class TestLogger 
     {
         private string _logdir;
         private readonly List<string> _tempFiles = new List<string>();
 
-        [TestInitialize]
+        [SetUp]
         public void Initialize()
         {
-            _logdir = Path.Combine(TestContext.TestDir,
-                $"{TestContext.TestName}_logfile.txt");
+            var cxt = TestContext.CurrentContext;
+            _logdir = Path.Combine(cxt.TestDirectory,
+                $"{cxt.Test.FullName}_logfile.txt");
 
             Directory.CreateDirectory(_logdir);
         }
 
-        [TestCleanup]
+        [TearDown]
         public void DeleteFiles()
         {
             foreach (var file in _tempFiles)
@@ -31,7 +31,7 @@ namespace BitAddict.Aras.UnitTests
             Directory.Delete(_logdir);
         }
 
-        [TestMethod]
+        [Test]
         public void TestSingleThread()
         {
             const string msg = "test";
@@ -47,7 +47,7 @@ namespace BitAddict.Aras.UnitTests
             Assert.AreEqual(msg + "\n", logText);
         }
 
-        [TestMethod]
+        [Test]
         public void TestSequential()
         {
             string file1, file2;
@@ -67,7 +67,7 @@ namespace BitAddict.Aras.UnitTests
             Assert.AreEqual(file1, file2);
         }
 
-        [TestMethod]
+        [Test]
         public void TestParallell()
         {
             string file1, file2;
@@ -93,7 +93,7 @@ namespace BitAddict.Aras.UnitTests
         }
 
 
-        [TestMethod]
+        [Test]
         public void TestLogOrder()
         {
             string file;
