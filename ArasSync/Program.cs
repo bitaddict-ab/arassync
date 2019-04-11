@@ -8,7 +8,7 @@ using static ManyConsole.ConsoleCommandDispatcher;
 
 namespace BitAddict.Aras.ArasSyncTool
 {
-    class Program
+    internal static class Program
     {
         private static int Main(string[] args)
         {
@@ -57,7 +57,7 @@ namespace BitAddict.Aras.ArasSyncTool
             }
         }
 
-        private static int ShowHelp(IList<ConsoleCommand> commands)
+        private static int ShowHelp(IEnumerable<ConsoleCommand> commands)
         {
             foreach (var g in commands
                 .GroupBy(c => c.GetType().GetCustomAttribute<CommandCategoryAttribute>()?.Category ?? "Standard")

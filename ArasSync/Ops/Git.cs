@@ -2,7 +2,7 @@
 
 namespace BitAddict.Aras.ArasSyncTool.Ops
 {
-    public class Git
+    internal static class Git
     {
         public static string GetRepoStatusString()
         {

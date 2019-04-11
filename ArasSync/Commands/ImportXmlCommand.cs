@@ -3,11 +3,16 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 using XmlNode = BitAddict.Aras.ArasSyncTool.Data.XmlNode;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Imports XML fragments from arassync.json into Aras installation directory files
+    /// </summary>
+    [UsedImplicitly]
     public class ImportXmlCommand : ConsoleCommand
     {
         public string Database { get; set; }

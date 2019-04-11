@@ -2,10 +2,15 @@
 using System.IO;
 using System.Linq;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Uploads the current feature's server files to Aras installation directory
+    /// </summary>
+    [UsedImplicitly]
     public class ImportFilesCommand : ConsoleCommand
     {
         public string Database { get; set; }
@@ -14,8 +19,8 @@ namespace BitAddict.Aras.ArasSyncTool.Commands
 
         public ImportFilesCommand()
         {
-            IsCommand("ImportFiles", "Upload the current directory's server files from local disc into the Aras " +
-                "installation directiory");
+            IsCommand("ImportFiles", "Upload the current feature's server files from local disc into the Aras " +
+                "installation directory");
 
             HasRequiredOption("db=|database=", "The Aras instance id to import into", db => Database = db);
             HasOption("amlsync=", "The path to the amlsync.json file.", f => AmlSyncFile = f);

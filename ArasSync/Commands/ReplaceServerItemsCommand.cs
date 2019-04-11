@@ -7,12 +7,17 @@ using System.Xml.Linq;
 using System.Xml.XPath;
 using Aras.IOM;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Update the project's AML files with delete actions for relationships that exist in the database but not locally.
+    /// </summary>
     [CommandCategory("Advanced")]
-    internal class ReplaceServerItemsCommand : ConsoleCommand
+    [UsedImplicitly]
+    public class ReplaceServerItemsCommand : ConsoleCommand
     {
         public string Database { get; set; }
 

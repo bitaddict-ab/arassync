@@ -1,19 +1,23 @@
 ﻿using System;
-using System.Linq;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Updates an xml-tag in AML from on-disk code file
+    /// </summary>
     [CommandCategory("Advanced")]
-    class MergeAMLCommand : ConsoleCommand
+    [UsedImplicitly]
+    public class MergeAmlCommand : ConsoleCommand
     {
         public string AmlFile { get; set; }
         public string CodeFile { get; set; }
 
         public string XPathExpr { get; set; }
 
-        public MergeAMLCommand()
+        public MergeAmlCommand()
         {
             IsCommand("MergeAML", "Updates an xml-tag in AML from on-disk code file");
 

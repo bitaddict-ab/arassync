@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace BitAddict.Aras.ArasSyncTool.Ops
 {
-    public static class Config
+    internal static class Config
     {
         private static DirectoryInfo _solutionDir;
 

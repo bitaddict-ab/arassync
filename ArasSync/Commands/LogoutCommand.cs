@@ -1,11 +1,15 @@
 ﻿using System;
-using System.Linq;
 using BitAddict.Aras.Security;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
-    class LogoutCommand : ConsoleCommand
+    /// <summary>
+    /// Removes encrypted Aras login information from disk
+    /// </summary>
+    [UsedImplicitly]
+    public class LogoutCommand : ConsoleCommand
     {
         public LogoutCommand()
         {

@@ -1,15 +1,18 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Threading;
 using BitAddict.Aras.ArasSyncTool.Ops;
 using BitAddict.Aras.Data;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
-    class CopyDllCommand : ConsoleCommand
+    /// <summary>
+    /// Build and copies DLLs
+    /// </summary>
+    [UsedImplicitly]
+    public class CopyDllCommand : ConsoleCommand
     {
         public bool Confirm { get; set; } = true;
         public bool Build { get; set; } = true;

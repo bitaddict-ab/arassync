@@ -1,19 +1,23 @@
 ﻿using System;
-using System.Linq;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Extract single AML tag from file and writes to disk
+    /// </summary>
     [CommandCategory("Advanced")]
-    class ExtractAMLCommand : ConsoleCommand
+    [UsedImplicitly]
+    public class ExtractAmlCommand : ConsoleCommand
     {
         public string AmlFile { get; set; }
         public string CodeFile { get; set; }
 
         public string XPathExpr { get; set; }
 
-        public ExtractAMLCommand()
+        public ExtractAmlCommand()
         {
             IsCommand("ExtractAML", "Extract xml-tag from AML and writes to on-disk code file");
 

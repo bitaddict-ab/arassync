@@ -1,15 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Xml;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Merges all xml tags in amlsync.json into local AML files.
+    /// </summary>
     [CommandCategory("Advanced")]
-    class MergeAllCommand : ConsoleCommand
+    [UsedImplicitly]
+    public class MergeAllCommand : ConsoleCommand
     {
         public string AmlSyncFile { get; set; } = "amlsync.json";
 

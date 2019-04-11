@@ -3,12 +3,17 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Generates and uploads documentation via docu to the web server
+    /// </summary>
     [CommandCategory("Advanced")]
-    class UploadDocCommand : ConsoleCommand
+    [UsedImplicitly]
+    public class UploadDocCommand : ConsoleCommand
     {
         public bool Confirm { get; set; } = true;
         public bool Build { get; set; } = true;

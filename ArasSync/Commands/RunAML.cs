@@ -4,16 +4,21 @@ using Aras.Common.Compression;
 using Aras.IOM;
 using BitAddict.Aras.ArasSyncTool.Ops;
 using BitAddict.Aras.Security;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
-    public class RunAMLCommand : ConsoleCommand
+    /// <summary>
+    /// Runs an AML query on an Aras database
+    /// </summary>
+    [UsedImplicitly]
+    public class RunAmlCommand : ConsoleCommand
     {
         public string AmlFilePath { get; set; }
         public string Database { get; set; }
 
-        public RunAMLCommand()
+        public RunAmlCommand()
         {
             IsCommand("RunAML", "Run an AML query on the database");
 

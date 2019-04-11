@@ -1,14 +1,18 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using BitAddict.Aras.ArasSyncTool.Ops;
 using BitAddict.Aras.Data;
+using JetBrains.Annotations;
 using ManyConsole;
 using Newtonsoft.Json;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
-    class ListDbCommand : ConsoleCommand
+    /// <summary>
+    /// Lists Aras database information in local arasdb.json file
+    /// </summary>
+    [UsedImplicitly]
+    public class ListDbCommand : ConsoleCommand
     {
         public bool ShortFormat { get; set; }
 

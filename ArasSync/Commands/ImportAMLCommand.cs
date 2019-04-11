@@ -2,18 +2,23 @@
 using System.IO;
 using System.Linq;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
-    public class ImportAMLCommand : ConsoleCommand
+    /// <summary>
+    /// Import all AML for a fature from to an Aras DB
+    /// </summary>
+    [UsedImplicitly]
+    public class ImportAmlCommand : ConsoleCommand
     {
         public string ManifestFile { get; set; }
         public string Database { get; set; }
         public string AmlSyncFile { get; set; } = "amlsync.json";
         public bool Confirm { get; set; } = true;
 
-        public ImportAMLCommand()
+        public ImportAmlCommand()
         {
             IsCommand("ImportAML", "Imports the current directory's AML from local disc into an Aras database");
 

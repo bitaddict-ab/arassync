@@ -26,7 +26,7 @@ namespace BitAddict.Aras.ArasSyncTool.Ops
         internal static int RunProcess(string exeName, bool silent, ref string output, params string[] args)
         {
             var sb = output != null ? new StringBuilder() : null;
-            var argsString = String.Join(" ", args.Select(s => $"\"{s}\""));
+            var argsString = string.Join(" ", args.Select(s => $"\"{s}\""));
 
             if (Environment.GetEnvironmentVariable("ARASSYNC_DEBUG") != null)
             {

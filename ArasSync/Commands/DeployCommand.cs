@@ -1,8 +1,13 @@
 ﻿using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Deploys the current directory's Aras feature into to an Aras instance
+    /// </summary>
+    [UsedImplicitly]
     public class DeployCommand : ConsoleCommand
     {
         public string ManifestFile { get; set; }
@@ -11,7 +16,7 @@ namespace BitAddict.Aras.ArasSyncTool.Commands
 
         public DeployCommand()
         {
-            IsCommand("Deploy", "Deploy the current directory's feature into the Aras installation directiory");
+            IsCommand("Deploy", "Deploy the current directory's feature into the Aras instance");
 
             HasOption("mf=|manifest=", "Manifest file to run, otherwise runs *.mf in order", f => ManifestFile = f);
             HasRequiredOption("db=|database=", "The Aras instance id to import into", db => Database = db);
@@ -25,7 +30,7 @@ namespace BitAddict.Aras.ArasSyncTool.Commands
             var featureName = Common.GetFeatureName();
             Common.RequestUserConfirmation($"deploy all aspects of {featureName} to {Database}");
 
-            new ImportAMLCommand
+            new ImportAmlCommand
             {
                 ManifestFile = ManifestFile,
                 Database = Database,

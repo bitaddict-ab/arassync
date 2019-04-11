@@ -2,13 +2,18 @@
 using System.IO;
 using System.Linq;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 using static ManyConsole.ConsoleCommandDispatcher;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Runs an arassync command in every feature directory (subdir below current)
+    /// </summary>
     [CommandCategory("Advanced")]
-    class ForAllCommand : ConsoleCommand
+    [UsedImplicitly]
+    public class ForAllCommand : ConsoleCommand
     {
         public ForAllCommand()
         {

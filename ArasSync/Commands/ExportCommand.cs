@@ -1,14 +1,16 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Xml;
-using System.Xml.Linq;
-using System.Xml.XPath;
 using BitAddict.Aras.ArasSyncTool.Ops;
+using JetBrains.Annotations;
 using ManyConsole;
 
 namespace BitAddict.Aras.ArasSyncTool.Commands
 {
+    /// <summary>
+    /// Export all AML for a feature to disk
+    /// </summary>
+    [UsedImplicitly]
     public class ExportCommand : ConsoleCommand
     {
         public string ManifestFile { get; set; }

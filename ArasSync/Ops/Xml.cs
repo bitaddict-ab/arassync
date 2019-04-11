@@ -7,7 +7,7 @@ using System.Xml.XPath;
 
 namespace BitAddict.Aras.ArasSyncTool.Ops
 {
-    internal class Xml
+    internal static class Xml
     {
         private static string NormalizeNewlines(string str)
         {
