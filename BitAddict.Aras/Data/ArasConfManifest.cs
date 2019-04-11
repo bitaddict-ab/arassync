@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using JetBrains.Annotations;
 
 namespace BitAddict.Aras.Data
 {
@@ -7,6 +9,8 @@ namespace BitAddict.Aras.Data
     ///
     /// Represents an entire arasdb(-local).json file.
     /// </summary>
+    [UsedImplicitly]
+    [SuppressMessage("ReSharper", "CollectionNeverUpdated.Global")]
     public class ArasConfManifest
     {
         /// <summary>
@@ -26,6 +30,7 @@ namespace BitAddict.Aras.Data
     /// <summary>
     /// Defines an Aras database instance
     /// </summary>
+    [UsedImplicitly]
     public class ArasDb
     {
         /// <summary>
@@ -48,7 +53,9 @@ namespace BitAddict.Aras.Data
 
     /// <summary>
     /// Configures copyDLL command with extensions and exclusions
-    /// </summary>
+    /// </summary>    
+    [UsedImplicitly]
+    [SuppressMessage("ReSharper", "AutoPropertyCanBeMadeGetOnly.Global")]
     public class CopyDllInfo
     {
         /// <summary>
