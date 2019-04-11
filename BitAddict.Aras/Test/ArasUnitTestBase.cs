@@ -18,12 +18,22 @@ namespace BitAddict.Aras.Test
     /// </summary>
     public class ArasUnitTestBase : TestBase
     {
+        /// <summary>
+        /// Current Innovator instance, use to talk to aras. Connects to DevelopmentInstance DB
+        /// </summary>
         protected static Innovator Innovator { get; private set; }
+        /// <summary>
+        /// Aras server connection
+        /// </summary>
         protected static HttpServerConnection Connection { get; private set; }
+        /// <summary>
+        /// Item returned by login
+        /// </summary>
         protected static Item LoginItem { get; private set; }
+        /// <summary>
+        /// Folder where logs are stored
+        /// </summary>
         protected static string LogFolder { get; private set; }
-
-
 
         private static int _connectionCount;
 
