@@ -16,7 +16,7 @@ set XMLREPORT="%CD%\nunit-report.xml"
 set HTMLREPORT="%CD%\nunit-report.html"
 
 setlocal disabledelayedexpansion
-call %~dp0\_NUnit.cmd Cpac.Aras.sln --skipnontestassemblies --labels=before^
+call %~dp0\_NUnit.cmd BitAddict.Aras.OpenSource.sln --skipnontestassemblies --labels=before^
  --where:"cat != IntegrationTest" --result=%XMLREPORT%;format=nunit2 --noheader
 
 set _TESTERRLEVEL=%ERRORLEVEL%

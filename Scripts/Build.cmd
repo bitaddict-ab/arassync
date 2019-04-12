@@ -16,7 +16,7 @@ echo.
 echo === Building projects in debug ===
 echo.
 
-call scripts\_msbuild.cmd Cpac.Aras.Sln /p:Configuration=Debug /nologo /verbosity:minimal /filelogger
+call scripts\_msbuild.cmd BitAddict.Aras.OpenSource.sln /p:Configuration=Debug /nologo /verbosity:minimal /filelogger
 set _BUILDERRLEVEL=%ERRORLEVEL%
 echo.
 

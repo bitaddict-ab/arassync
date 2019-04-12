@@ -18,6 +18,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		VisualStudio.bat = VisualStudio.bat
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{253FEDBD-90A4-4C80-B2F1-D03C3DD8594B}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Analyze.cmd = Scripts\Analyze.cmd
+		Scripts\Build.cmd = Scripts\Build.cmd
+		Scripts\UnitTests.cmd = Scripts\UnitTests.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{B0267693-468E-4ABD-A487-618F5FEC190A}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\_DevEnv.cmd = Scripts\_DevEnv.cmd
+		Scripts\_MsBuild.cmd = Scripts\_MsBuild.cmd
+		Scripts\_NuGet.cmd = Scripts\_NuGet.cmd
+		Scripts\_NUnit.cmd = Scripts\_NUnit.cmd
+		Scripts\_RestoreNugetCsproj.ps1 = Scripts\_RestoreNugetCsproj.ps1
+		Scripts\_RestorePackages.cmd = Scripts\_RestorePackages.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +52,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0267693-468E-4ABD-A487-618F5FEC190A} = {253FEDBD-90A4-4C80-B2F1-D03C3DD8594B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {832E2A81-AA5A-4415-BEF3-9496F9D19413}

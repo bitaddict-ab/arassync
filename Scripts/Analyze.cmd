@@ -3,7 +3,7 @@ setlocal
 cd /D %~dp0..
 
 call %~dp0\Build.cmd
-set _BUILD_ERRORLEVEL %ERRORLEVEL%
+set _BUILD_ERRORLEVEL=%ERRORLEVEL%
 
 echo =============== Analyzing code for quality/conformity issues ===============
 echo.
@@ -23,7 +23,7 @@ set XMLREPORT="%CD%\resharper-inspect-report.xml"
 set HTMLREPORT="%CD%\resharper-inspect-report.html"
 
 @echo on
-%INSPECTCODE% Cpac.Aras.sln --output=%XMLREPORT% --format=xml --severity=WARNING --verbosity=WARN --no-swea
+%INSPECTCODE% BitAddict.Aras.OpenSource.sln --output=%XMLREPORT% --format=xml --severity=WARNING --verbosity=WARN --no-swea
 @echo off
 IF ERRORLEVEL 1 exit /b %ERRORLEVEL%
 

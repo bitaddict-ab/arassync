@@ -13,6 +13,6 @@ echo === Restoring packages ===
 echo.
 REM powershell -command "Set-ExecutionPolicy Bypass -Scope CurrentUser"
 REM powershell -command ".\scripts\_RestoreNuGetCsproj.ps1" %CD%
-call scripts\_nuget.cmd restore Cpac.Aras.sln
+call scripts\_nuget.cmd restore BitAddict.Aras.OpenSource.sln
 echo.
 exit /b %ERRORLEVEL%
