@@ -21,14 +21,17 @@ namespace BitAddict.Aras.ArasSync.Ops
 
                 r = $@"..\ArasTools\ConsoleUpgrade\{r}";
                 if (File.Exists(r))
-                    return r;
+                    return Path.GetFullPath(r);
 
-                r = $@"..\{r}";
-                if (File.Exists(r))
-                    return r;
+                while (Path.GetDirectoryName(Path.GetFullPath(r)) != Path.GetPathRoot(r))
+                {
+                    r = $@"..\{r}";
+                    if (File.Exists(r))
+                        return Path.GetFullPath(r);
+                }
 
                 throw new InvalidOperationException(
-                    $"Failed to find consoleupgrade.exe on PATH or relative to  {Directory.GetCurrentDirectory()}");
+                    $"Failed to find ConsoleUpgrade.exe on PATH or relative to {Directory.GetCurrentDirectory()}");
             }
         }
 
