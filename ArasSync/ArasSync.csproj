@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandCategoryAttribute.cs" />
+    <Compile Include="Commands\AboutCommand.cs" />
     <Compile Include="Commands\DeployCommand.cs" />
     <Compile Include="Commands\ImportXmlCommand.cs" />
     <Compile Include="Commands\ReplaceServerItemsCommand.cs" />
