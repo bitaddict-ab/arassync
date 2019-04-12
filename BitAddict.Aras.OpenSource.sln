@@ -12,17 +12,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		arasdb.json = arasdb.json
-		CommandPrompt.bat = CommandPrompt.bat
 		COPYING.txt = COPYING.txt
 		README.md = README.md
-		VisualStudio.bat = VisualStudio.bat
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{253FEDBD-90A4-4C80-B2F1-D03C3DD8594B}"
 	ProjectSection(SolutionItems) = preProject
 		Scripts\Analyze.cmd = Scripts\Analyze.cmd
 		Scripts\Build.cmd = Scripts\Build.cmd
+		Scripts\CommandPrompt.bat = Scripts\CommandPrompt.bat
 		Scripts\UnitTests.cmd = Scripts\UnitTests.cmd
+		Scripts\VisualStudio.bat = Scripts\VisualStudio.bat
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{B0267693-468E-4ABD-A487-618F5FEC190A}"

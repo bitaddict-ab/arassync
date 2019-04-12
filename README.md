@@ -7,7 +7,8 @@ Code is developed & maintanted by Bit Addict AB, but copyright belongs to:
 * Consilum Marine & Safety AB
 * CPAC Systems AB
 
-This code is licensed under the MIT license, see LICENSE.txt.
+This code has been developed, paid for and generously licensed under the MIT license by the above compaines
+See COPYING.TXT for full license/copyright information.
 
 ### What is this repository for? ###
 
@@ -15,11 +16,13 @@ This code is licensed under the MIT license, see LICENSE.txt.
 
 Provides a base kit to simplify implementing, testing and managing Aras extensions.
 
-Aras extensions are written as C# DLLs, server-methods (C#/VB), javascript and HTML,
+Aras extensions are written as a combination C# DLLs, server-methods (C#/VB), JavaScript and HTML,
 as well as database objects such as custom properties, fields, actions et.al.
 
 The scripts and tools found here allows developers to import, export, implement,
 build, test and deploy Aras Extensions with relative ease.
+
+In particular, features can be developed, tested and deployted on different environemnts/databased, like dev, test and production separately.
 
 ### How do I get set up? ###
 
@@ -34,30 +37,36 @@ You can also run just CommandPrompt.cmd to avoid starting Visual Studio.
 
 #### Command-line tools
 
-Available commands for ArasSync.exe are:
+The available commands for ArasSync.exe are: (run 'arasync help' to see:)
 
-Global commands (run anywhere in repo):
+Advanced available commands are:
 
-    ListDB      - List Aras instances specified in arasdb.json file(s).
-    ForAll      - Runs an 'arassync' command in every feature directory.
+    ExtractAll         - Extract all xml-tags specified in amlsync.json from AML and writes to on-disk code file
+    ExtractAML         - Extract xml-tag from AML and writes to on-disk code file
+    ForAll             - Runs an 'arassync' command in every feature directory
+    MergeAll           - Merges all xml-tags specified in amlsync.json from files into AML file
+    MergeAML           - Updates an xml-tag in AML from on-disk code file
+    ReplaceServerItems - Update the project's AML files with delete actions for relationships that exist in the database but not locally.
+    UploadDoc          - Generates and uploads documentation from C#-sources for the current feature to the Aras Web Server bin/htmldoc/<feature> folder
 
+    help <name>        - For help with one of the above commands
+
+Standard available commands are:
+
+    About       - Shows full license/copyright notice
+    CopyDLL     - Builds and copies DLLs & docs for the current feature to the Aras Web Server bin folder
+    Deploy      - Deploy the current directory's feature into the Aras instance
+    Export      - Exports the current directory's feature from Aras database to disk
+    ImportAML   - Imports the current directory's AML from local disc into an Aras database
+    ImportFiles - Upload the current feature's server files from local disc into the Aras installation directory
+    ImportXml   - Imports the current directory's XML fragments from local disc into an Aras installation directory
+    ListDB      - List Aras instances specified in arasdb.json file(s)
     Login       - Asks user for Aras name/password and stores encrypted on disk.
-    Logout      - Removes login information previously stored on disk.
     LoginStatus - Returns 0 (ok) if user is logged in or 1 if not.
+    Logout      - Removes login information previously stored on disk.
+    RunAML      - Run an AML query on the database
 
-    help <name> - For help with a specific command.
-
-Feature commands (run in project subfolder):
-
-    CopyDLL     - Builds and copies DLLs for the current feature to the Aras Web Server bin folder.
-    Import      - Imports the current directory's feature from local disc into an Aras database.
-    Export      - Exports the current directory's feature from Aras database to disk.
-
-    ExtractAll  - Extract all xml-tags in manifest from AML and writes to on-disk code file.
-    ExtractAML  - Extract xml-tag from AML and writes to on-disk code file.
-
-    MergeAll    - Merges all xml-tags in manifest from files into AML file.
-    MergeAML    - Updates an xml-tag in AML from on-disk code file.
+    help <name> - For help with one of the above commands
 
 #### Dependencies
 
@@ -68,7 +77,7 @@ Feature commands (run in project subfolder):
 
 #### Database configuration
 
-arasdb/arasdb-json.local defines Aras instances (Web browser HTTP URL, IIS server folder and SQL database name)
+arasdb.json & arasdb-local.json defines Aras instances (Web browser HTTP URL, IIS server folder and SQL database name)
 
 A single instance is defined to be used as the developer instance,
 which is were unit tests fetch data and integeration test methods are executed.
@@ -77,16 +86,17 @@ Create arasdb-local.json if you have user-specific Aras databases/instances to t
 
 #### How to run tests
 
- * Start VisualStudio.cmd.
- * Enter login/password if required.
- * Use the built-in test runner in VS2015,
-   i.e. right click a test-project/-class/-method and select 'run unit test(s)'.
+ * Run 'arassync login' and enter login/password if required.
+ * Run Scripts\UnitTests.cmd (some are more like integration tests)
+
+You can also run them from within Visual Studio by installing right-clicking a project.
+
+Tests aare currently a mix of MSTest and NUnit framework, but we plan to migrate fully to NUnit.
 
 #### Deployment instructions
 
- * Run 'arassync copydll -db=[DBID]' to build and copy DLLs to web application
- * Update C:/Program Files (x86)/[aras]/server/method-config.xml and add copied DLLs (and using BitAddict.Aras)
- * Run 'arassync import -db=[DBID]' to update database objects
+ * Run 'arassync deploy --db=[DBID]' to build and copy DLLs to web application
+ * Run 'arassync import --db=[DBID]' to update database objects
 
  Use 'arassync forall \<command> \<args>' to run a command for all features (i.e subdirs with 'amlsync.json') in repo.
 
@@ -94,9 +104,12 @@ Create arasdb-local.json if you have user-specific Aras databases/instances to t
 
 #### Writing tests
 
-Add unit tests and/or integration tests using MS Unittest Framework.
+Add unit tests and/or integration tests using MS Unittest Framework or NUnit (preferred=.
 
-Unit Test classes should inherit ArasExtensions.ArasTestCaseBase and reimplement ClassInitialize/ClassCleanup.
+Unit Test classes should:
+
+ * inherit BitAddict.Aras.Test.ArasUnitTestBase and reimplement ClassInitialize/ClassCleanup.
+ * or, inherit BitAddict.Aras.Test.ArasNUnitTestBase and reimplement ClassInitialize/ClassCleanup tagged with [SetUp]/[TearDown].
 
 #### Code review
 
@@ -104,7 +117,7 @@ Use EditorConfig and Resharper to get a consistent formatting.
 
 #### Other guidelines
 
-To get consistent logging and automated error handling, server methods should
+To get good and consistent logging and automated error handling, server methods should
 inherit ArasMethod and use the custom ApplyXXX methods.
 
 ### Who do I talk to? ###
