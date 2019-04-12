@@ -14,7 +14,7 @@ namespace BitAddict.Aras.ArasSync.Commands
     {
         public AboutCommand()
         {
-            IsCommand("About", "Shows full license/copyright notice.");
+            IsCommand("About", "Shows full license/copyright notice");
         }
 
         public override int Run(string[] remainingArguments)

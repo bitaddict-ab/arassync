@@ -19,7 +19,7 @@ namespace BitAddict.Aras.ArasSync.Commands
 
         public MergeAllCommand()
         {
-            IsCommand("MergeAll", "Merges all xml-tags specifed in amlsync.json from files into AML file.");
+            IsCommand("MergeAll", "Merges all xml-tags specified in amlsync.json from files into AML file");
 
             HasLongDescription("Synchronizes on-disc files (editable in Visual Studio) " +
                                "into the raw AML files that Aras imports/exports.\n" +

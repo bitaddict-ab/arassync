@@ -90,7 +90,7 @@
     </Compile>
     <Compile Include="UserMessageException.cs" />
     <Compile Include="Commands\ExportCommand.cs" />
-    <Compile Include="Commands\ImportAMLCommand.cs" />
+    <Compile Include="Commands\ImportAmlCommand.cs" />
     <Compile Include="Commands\LoginStatusCommand.cs" />
     <Compile Include="Commands\ListDbCommand.cs" />
     <Compile Include="Commands\LoginCommand.cs" />
@@ -103,8 +103,8 @@
     <Compile Include="Ops\Git.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Commands\ExtractAMLCommand.cs" />
-    <Compile Include="Commands\MergeAMLCommand.cs" />
+    <Compile Include="Commands\ExtractAmlCommand.cs" />
+    <Compile Include="Commands\MergeAmlCommand.cs" />
     <Compile Include="Ops\Xml.cs" />
   </ItemGroup>
   <ItemGroup>

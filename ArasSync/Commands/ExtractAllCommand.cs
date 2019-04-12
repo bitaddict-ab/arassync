@@ -7,14 +7,17 @@ using ManyConsole;
 
 namespace BitAddict.Aras.ArasSync.Commands
 {
+    /// <summary>
+    /// Extract xml-tags from AML file and writes to on disk file
+    /// </summary>
     [CommandCategory("Advanced")]
-    class ExtractAllCommand : ConsoleCommand
+    public class ExtractAllCommand : ConsoleCommand
     {
         public string AmlSyncFile { get; set; } = "amlsync.json";
 
         public ExtractAllCommand()
         {
-            IsCommand("ExtractAll", "Extract all xml-tags specifed in amlsync.json from AML and writes to on-disk code file");
+            IsCommand("ExtractAll", "Extract all xml-tags specified in amlsync.json from AML and writes to on-disk code file");
 
             HasLongDescription("Extracts XML element contents to on-disc files " +
                                "(editable in Visual Studio)\n" +

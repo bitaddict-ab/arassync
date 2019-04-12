@@ -19,11 +19,9 @@ namespace BitAddict.Aras.ArasSync.Commands
 
         public ListDbCommand()
         {
-            IsCommand("ListDB", "List Aras instances specified in arasdb.json file(s).");
+            IsCommand("ListDB", "List Aras instances specified in arasdb.json file(s)");
 
             HasOption("shortformat", "Show only DB Ids, not full data", b => ShortFormat = true);
-
-            SkipsCommandSummaryBeforeRunning();
         }
 
         public override int Run(string[] remainingArguments)

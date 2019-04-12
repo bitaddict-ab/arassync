@@ -7,7 +7,7 @@ using ManyConsole;
 namespace BitAddict.Aras.ArasSync.Commands
 {
     [UsedImplicitly]
-    class LoginCommand : ConsoleCommand
+    public class LoginCommand : ConsoleCommand
     {
         public string Username { get; set; }
         public string Password { get; set; }
