@@ -124,5 +124,6 @@ inherit ArasMethod and use the custom ApplyXXX methods.
 
 * Marcus Sonestedt (marcus.lindblom.sonestedt@bitaddict.se)
 * Jimmy Börjesson (jimmy.borjesson@bitaddict.se)
+* Daniel Jonsson (daniel.jonsson@bitaddict.se)
 * Per Olsson (per.olsson@consilium.se)
-
+* Victor Stensson (victor.stensson@cpacsystems.se)
