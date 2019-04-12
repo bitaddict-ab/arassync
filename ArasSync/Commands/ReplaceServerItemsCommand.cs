@@ -1,4 +1,5 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,11 +7,11 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using Aras.IOM;
-using BitAddict.Aras.ArasSyncTool.Ops;
+using BitAddict.Aras.ArasSync.Ops;
 using JetBrains.Annotations;
 using ManyConsole;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Update the project's AML files with delete actions for relationships that exist in the database but not locally.

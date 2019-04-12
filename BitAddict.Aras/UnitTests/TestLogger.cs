@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿// MIT License, see COPYING.TXT
+using System.Collections.Generic;
 using System.IO;
 using NUnit.Framework;
 

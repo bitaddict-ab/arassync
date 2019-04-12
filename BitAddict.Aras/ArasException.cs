@@ -1,10 +1,11 @@
+// MIT License, see COPYING.TXT
 using System;
-using System.Linq;
 using Aras.IOM;
 using JetBrains.Annotations;
 
 namespace BitAddict.Aras
 {
+    /// <inheritdoc />
     /// <summary>
     /// Represents AML query errors
     /// </summary>
@@ -22,6 +23,7 @@ namespace BitAddict.Aras
         [CanBeNull]
         public Item ResultItem { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Create exception with message
         /// </summary>
@@ -29,6 +31,7 @@ namespace BitAddict.Aras
         public ArasException(string message) : base(message)
         { }
 
+        /// <inheritdoc />
         /// <summary>
         /// Create exception from AML error Item. Sets ResultItem.
         /// </summary>
@@ -38,11 +41,13 @@ namespace BitAddict.Aras
             ResultItem = resultItem;
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Create when Aras query fails due to another exception
         /// </summary>
         /// <param name="message"></param>
         /// <param name="innerException"></param>
+        // ReSharper disable once UnusedMember.Global
         public ArasException(string message, Exception innerException) : base(message, innerException)
         { }
     }

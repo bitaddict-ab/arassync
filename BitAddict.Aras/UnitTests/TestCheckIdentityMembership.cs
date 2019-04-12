@@ -1,4 +1,5 @@
-﻿using BitAddict.Aras.Test;
+﻿// MIT License, see COPYING.TXT
+using BitAddict.Aras.Test;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 #pragma warning disable 1591
 

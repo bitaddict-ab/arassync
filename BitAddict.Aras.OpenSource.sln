@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
-		arasdb.json.example = arasdb.json.example
+		arasdb.json = arasdb.json
 		CommandPrompt.bat = CommandPrompt.bat
-		LICENSE.txt = LICENSE.txt
+		COPYING.txt = COPYING.txt
 		README.md = README.md
 		VisualStudio.bat = VisualStudio.bat
 	EndProjectSection

@@ -1,11 +1,12 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.XPath;
 
-namespace BitAddict.Aras.ArasSyncTool.Ops
+namespace BitAddict.Aras.ArasSync.Ops
 {
     internal static class Xml
     {

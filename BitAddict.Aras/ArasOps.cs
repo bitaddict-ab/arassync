@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿// MIT License, see COPYING.TXT
+using System;
 using Aras.IOM;
 
 namespace BitAddict.Aras

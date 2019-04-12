@@ -1,6 +1,7 @@
+// MIT License, see COPYING.TXT
 using System;
 
-namespace BitAddict.Aras.ArasSyncTool
+namespace BitAddict.Aras.ArasSync
 {
     internal class CommandCategoryAttribute : Attribute
     {

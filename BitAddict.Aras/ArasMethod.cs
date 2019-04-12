@@ -1,3 +1,4 @@
+// MIT License, see COPYING.TXT
 using Aras.IOM;
 
 namespace BitAddict.Aras

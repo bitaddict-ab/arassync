@@ -1,4 +1,5 @@
-﻿extern alias InnovatorCore;
+﻿// MIT License, see COPYING.TXT
+extern alias InnovatorCore;
 
 using System;
 using InnovatorCore::Aras.Server.Security;

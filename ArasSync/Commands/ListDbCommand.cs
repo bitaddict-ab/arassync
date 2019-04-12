@@ -1,12 +1,13 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
-using BitAddict.Aras.ArasSyncTool.Ops;
+using BitAddict.Aras.ArasSync.Ops;
 using BitAddict.Aras.Data;
 using JetBrains.Annotations;
 using ManyConsole;
 using Newtonsoft.Json;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Lists Aras database information in local arasdb.json file

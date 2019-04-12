@@ -1,4 +1,5 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Reflection;
 using ManyConsole;
 using static ManyConsole.ConsoleCommandDispatcher;
 
-namespace BitAddict.Aras.ArasSyncTool
+namespace BitAddict.Aras.ArasSync
 {
     internal static class Program
     {

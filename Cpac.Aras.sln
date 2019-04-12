@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArasSync", "ArasSync\ArasSync.csproj", "{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitAddict.Aras", "BitAddict.Aras\BitAddict.Aras.csproj", "{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitAddict.Aras.BomExport", "BitAddict.Aras.BomExport\BitAddict.Aras.BomExport.csproj", "{2B8D3A87-2FDC-4DCF-BD5C-ED1D9D96BA18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E362B61A-F9D7-4EB8-9BD0-22A60F6A65BA}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		arasdb.json = arasdb.json
+		CommandPrompt.bat = CommandPrompt.bat
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		VisualStudio.bat = VisualStudio.bat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cpac.Aras.BomExport", "Cpac.Aras.BomExport\Cpac.Aras.BomExport.csproj", "{3DBC6587-4AC7-47E2-9F2E-9DAAAB35839E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cpac.Aras.WhereUsed", "Cpac.Aras.WhereUsed\Cpac.Aras.WhereUsed.csproj", "{BFF8F480-AAA9-43AA-B818-F94B685D5A73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{DE9BF340-FA0B-412D-BEBD-3FED0BE944B1}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\Analyze.cmd = Scripts\Analyze.cmd
+		Scripts\Build.cmd = Scripts\Build.cmd
+		Scripts\UnitTests.cmd = Scripts\UnitTests.cmd
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cpac.Aras.Claims", "Cpac.Aras.Claims\Cpac.Aras.Claims.csproj", "{CA124405-6E16-451E-9524-B08BE9EED502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitAddict.Aras.StructureBrowser", "BitAddict.Aras.StructureBrowser\BitAddict.Aras.StructureBrowser.csproj", "{22C5B577-8D48-4CA1-8E95-1A1D2C373BFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{B90FB287-934D-4DFB-AE61-37A7B8E19D7E}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\_DevEnv.cmd = Scripts\_DevEnv.cmd
+		Scripts\_docfx.cmd = Scripts\_docfx.cmd
+		Scripts\_MsBuild.cmd = Scripts\_MsBuild.cmd
+		Scripts\_NuGet.cmd = Scripts\_NuGet.cmd
+		Scripts\_NUnit.cmd = Scripts\_NUnit.cmd
+		Scripts\_RestoreNugetCsproj.ps1 = Scripts\_RestoreNugetCsproj.ps1
+		Scripts\_RestorePackages.cmd = Scripts\_RestorePackages.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{3F630783-6F62-40BB-AF98-69658E0931C8}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\CpacBitBucketPush.cmd = Scripts\CpacBitBucketPush.cmd
+		Scripts\CpacMerge.cmd = Scripts\CpacMerge.cmd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8D3A87-2FDC-4DCF-BD5C-ED1D9D96BA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8D3A87-2FDC-4DCF-BD5C-ED1D9D96BA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8D3A87-2FDC-4DCF-BD5C-ED1D9D96BA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8D3A87-2FDC-4DCF-BD5C-ED1D9D96BA18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBC6587-4AC7-47E2-9F2E-9DAAAB35839E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBC6587-4AC7-47E2-9F2E-9DAAAB35839E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBC6587-4AC7-47E2-9F2E-9DAAAB35839E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBC6587-4AC7-47E2-9F2E-9DAAAB35839E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF8F480-AAA9-43AA-B818-F94B685D5A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF8F480-AAA9-43AA-B818-F94B685D5A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF8F480-AAA9-43AA-B818-F94B685D5A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF8F480-AAA9-43AA-B818-F94B685D5A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA124405-6E16-451E-9524-B08BE9EED502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA124405-6E16-451E-9524-B08BE9EED502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA124405-6E16-451E-9524-B08BE9EED502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA124405-6E16-451E-9524-B08BE9EED502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C5B577-8D48-4CA1-8E95-1A1D2C373BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C5B577-8D48-4CA1-8E95-1A1D2C373BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C5B577-8D48-4CA1-8E95-1A1D2C373BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C5B577-8D48-4CA1-8E95-1A1D2C373BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B90FB287-934D-4DFB-AE61-37A7B8E19D7E} = {DE9BF340-FA0B-412D-BEBD-3FED0BE944B1}
+		{3F630783-6F62-40BB-AF98-69658E0931C8} = {DE9BF340-FA0B-412D-BEBD-3FED0BE944B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F89ADF3-B193-4E72-AEDD-64D4C0D47AC9}
+	EndGlobalSection
+EndGlobal

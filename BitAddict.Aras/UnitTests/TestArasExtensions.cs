@@ -1,5 +1,4 @@
-﻿#if DEBUG
-
+﻿// MIT License, see COPYING.TXT
 using System;
 using System.IO;
 using System.Linq;
@@ -64,5 +63,3 @@ namespace BitAddict.Aras.UnitTests
         }
     }
 }
-
-#endif

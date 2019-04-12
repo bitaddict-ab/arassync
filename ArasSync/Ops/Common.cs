@@ -1,4 +1,5 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -7,11 +8,11 @@ using System.Net;
 using System.Text;
 using System.Threading;
 using Aras.IOM;
-using BitAddict.Aras.ArasSyncTool.Data;
+using BitAddict.Aras.ArasSync.Data;
 using BitAddict.Aras.Security;
 using Newtonsoft.Json;
 
-namespace BitAddict.Aras.ArasSyncTool.Ops
+namespace BitAddict.Aras.ArasSync.Ops
 {
     internal static class Common
     {

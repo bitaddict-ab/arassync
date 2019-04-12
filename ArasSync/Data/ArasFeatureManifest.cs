@@ -1,7 +1,8 @@
-﻿using JetBrains.Annotations;
+﻿// MIT License, see COPYING.TXT
 using System.Collections.Generic;
+using JetBrains.Annotations;
 
-namespace BitAddict.Aras.ArasSyncTool.Data
+namespace BitAddict.Aras.ArasSync.Data
 {
     [UsedImplicitly]
     public class AmlNode

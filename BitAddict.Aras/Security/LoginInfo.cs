@@ -1,8 +1,8 @@
-﻿using JetBrains.Annotations;
+﻿// MIT License, see COPYING.TXT
+using JetBrains.Annotations;
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Text;
 
 namespace BitAddict.Aras.Security
@@ -46,7 +46,7 @@ namespace BitAddict.Aras.Security
 
                 return _keyFilePath;
             }
-            internal set { _keyFilePath = value; }
+            internal set => _keyFilePath = value;
         }
 
         /// <summary>

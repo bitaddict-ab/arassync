@@ -28,29 +28,12 @@ IF ERRORLEVEL 1 (
   exit /b 1
 )
 
-:: Get Nuget.exe
-
-SET NUGET_EXE=%~dp0\Core\.nuget\nuget.exe
-IF NOT EXIST "%NUGET_EXE%" (
-  echo Downloading NuGet.exe ...
-  mkdir "%~dp0\Core\.nuget\" >NUL
-
-  %~dp0\Core\ArasTools\Wget\wget.exe -nd -P %~dp0\.nuget\ --no-check-certificate https://dist.nuget.org/win-x86-commandline/latest/nuget.exe 
-  REM powershell Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile "%NUGET_EXE%"
-
-  :: wget changes title, so restore it
-  title Aras Development Command Prompt - %CD%
-)
-
-attrib +h %~dp0\.nuget
-
 :: Restore nuget packages
-
-cd %~dp0\..\
+SET NUGET_EXE=%~dp0\Bin\nuget.exe
 
 echo Restoring NuGet packages ...
 echo.
-"%NUGET_EXE%" restore 
+"%NUGET_EXE%" restore BitAddict.Aras.OpenSource.sln
 echo.
 
 cd %~dp0

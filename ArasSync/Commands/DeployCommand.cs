@@ -1,8 +1,9 @@
-﻿using BitAddict.Aras.ArasSyncTool.Ops;
+﻿// MIT License, see COPYING.TXT
+using BitAddict.Aras.ArasSync.Ops;
 using JetBrains.Annotations;
 using ManyConsole;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Deploys the current directory's Aras feature into to an Aras instance

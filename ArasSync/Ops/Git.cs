@@ -1,6 +1,7 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 
-namespace BitAddict.Aras.ArasSyncTool.Ops
+namespace BitAddict.Aras.ArasSync.Ops
 {
     internal static class Git
     {

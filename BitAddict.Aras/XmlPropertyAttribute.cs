@@ -1,23 +1,26 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.Linq;
 using System.Xml;
 
 namespace BitAddict.Aras
 {
-    /// <summary>
-    /// Marks a property as readable from XML element.
-    ///
-    /// Allows easy binding from XML data to C# properties.
-    /// Example: Decoding Aras Method call parameters from Item body.
-    /// </summary>
+    /// <inheritdoc />
+    ///  <summary>
+    ///  Marks a property as readable from XML element.
+    ///  Allows easy binding from XML data to C# properties.
+    ///  Example: Decoding Aras Method call parameters from Item body.
+    ///  </summary>
     public class XmlPropertyAttribute : Attribute
     {
+        /// <inheritdoc />
         /// <summary>
         /// Create default instance with null element name
         /// </summary>
         public XmlPropertyAttribute()
         { }
 
+        /// <inheritdoc />
         /// <summary>
         /// Create instance, setting element name and required flag
         /// </summary>

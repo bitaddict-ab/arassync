@@ -1,4 +1,5 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -7,6 +8,7 @@ using JetBrains.Annotations;
 
 namespace BitAddict.Aras
 {
+    /// <inheritdoc />
     /// <summary>
     /// Helps with logging by creating separate log files if running concurrently
     /// </summary>
@@ -117,6 +119,7 @@ namespace BitAddict.Aras
             }
         }
 
+        /// <inheritdoc />
         /// <summary>
         /// Mark object as disposed, will perform Dispose once writes are completed
         /// </summary>

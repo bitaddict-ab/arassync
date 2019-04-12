@@ -1,12 +1,13 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
 using System.Linq;
-using BitAddict.Aras.ArasSyncTool.Ops;
+using BitAddict.Aras.ArasSync.Ops;
 using BitAddict.Aras.Data;
 using JetBrains.Annotations;
 using ManyConsole;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Build and copies DLLs

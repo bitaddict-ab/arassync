@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ArasSyncTool")]
-[assembly: AssemblyDescription("Cmd-line tool to sync Aras AML parts between export-XML and separate files")]
+[assembly: AssemblyTitle("ArasSync")]
+[assembly: AssemblyDescription("Cmd-line tool to aid developing and testing of Aras PLM extensions")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Consilium Marine & Safety AB")]
-[assembly: AssemblyProduct("ArasSyncTool")]
-[assembly: AssemblyCopyright("Copyright © Consilium Marine & Safety AB 2016-2017")]
+[assembly: AssemblyCompany("Bit Addict AB")]
+[assembly: AssemblyProduct("ArasSyn")]
+[assembly: AssemblyCopyright("Copyright © Bit Addict AB, Consilium Marine & Safety AB, Cpac Systems AB 2016-2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

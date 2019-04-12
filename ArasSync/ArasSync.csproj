@@ -7,7 +7,7 @@
     <ProjectGuid>{98C8055A-DD3C-4254-A308-2DCF52E3C2F6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BitAddict.Aras.ArasSyncTool</RootNamespace>
+    <RootNamespace>BitAddict.Aras.ArasSync</RootNamespace>
     <AssemblyName>ArasSync</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -33,7 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>BitAddict.Aras.ArasSyncTool.Program</StartupObject>
+    <StartupObject>BitAddict.Aras.ArasSync.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitaddict.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IOM, Version=11.0.0.6549, Culture=neutral, PublicKeyToken=524d880b05474146, processorArchitecture=MSIL">
@@ -45,11 +48,11 @@
       <HintPath>..\packages\JetBrains.Annotations.2019.1.1\lib\net20\JetBrains.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="ManyConsole, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ManyConsole.1.0.0.3\lib\ManyConsole.dll</HintPath>
+      <HintPath>..\packages\ManyConsole.1.0.0.3\lib\ManyConsole.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Options, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Mono.Options.5.3.0.1\lib\net4-client\Mono.Options.dll</HintPath>
+      <HintPath>..\packages\Mono.Options.5.3.0.1\lib\net4-client\Mono.Options.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NDesk.Options, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -73,12 +76,17 @@
     <Compile Include="Commands\DeployCommand.cs" />
     <Compile Include="Commands\ImportXmlCommand.cs" />
     <Compile Include="Commands\ReplaceServerItemsCommand.cs" />
-    <Compile Include="Commands\RunAML.cs" />
+    <Compile Include="Commands\RunAmlCommand.cs" />
     <Compile Include="Commands\UploadDocCommand.cs" />
     <Compile Include="Commands\ForAllCommand.cs" />
     <Compile Include="Commands\CopyDllCommand.cs" />
     <Compile Include="Commands\ImportFilesCommand.cs" />
     <Compile Include="Ops\Config.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserMessageException.cs" />
     <Compile Include="Commands\ExportCommand.cs" />
     <Compile Include="Commands\ImportAMLCommand.cs" />
@@ -109,6 +117,14 @@
       <Project>{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}</Project>
       <Name>BitAddict.Aras</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitaddict.ico" />
+    <EmbeddedResource Include="COPYING.txt" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿// MIT License, see COPYING.TXT
+using System.IO;
 using System.Threading;
 using BitAddict.Aras.Security;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

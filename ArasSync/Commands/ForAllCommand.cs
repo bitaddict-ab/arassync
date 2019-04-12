@@ -1,12 +1,13 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
 using System.Linq;
-using BitAddict.Aras.ArasSyncTool.Ops;
+using BitAddict.Aras.ArasSync.Ops;
 using JetBrains.Annotations;
 using ManyConsole;
 using static ManyConsole.ConsoleCommandDispatcher;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Runs an arassync command in every feature directory (subdir below current)

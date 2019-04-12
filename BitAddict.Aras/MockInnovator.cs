@@ -1,7 +1,6 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Aras.IOM;
 // ReSharper disable InconsistentNaming
 
@@ -36,8 +35,7 @@ namespace BitAddict.Aras
         /// <returns></returns>
         public new Item getItemById(string itemType, string id)
         {
-            Item item;
-            _mockItems.TryGetValue(id, out item);
+            _mockItems.TryGetValue(id, out var item);
             return item ?? base.getItemById(itemType, id);
         }
 
@@ -50,7 +48,6 @@ namespace BitAddict.Aras
         public new Item getItemByKeyedName(string itemType, string keyedName)
         {
             var item = _mockItems.Values.FirstOrDefault(i => i.getProperty("keyed_name") == keyedName);
-
             return item ?? base.getItemByKeyedName(itemType, keyedName);
         }
     }

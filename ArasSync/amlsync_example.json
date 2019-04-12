@@ -2,42 +2,42 @@
     "AmlFragments":
     [
         {
-            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Form\\Custom_ManageFloatingDocuments.xml",
-            "nodes": [
+            "AmlFile": "ArasExport\\FloatingDocuments\\Import\\Form\\Custom_ManageFloatingDocuments.xml",
+            "Nodes": [
                 {
-                    "file": "Aras\\Form_ManageFloatingDocuments_Javascript.html",
-                    "xpath": "//Item[@type='Field' and name='_Javascript']/html_code"
+                    "File": "Aras\\Form_ManageFloatingDocuments_Javascript.html",
+                    "XPath": "//Item[@type='Field' and name='_Javascript']/html_code"
                 },
                 {
-                    "file": "Aras\\Form_ManageFloatingDocuments_FloatDoc.html",
-                    "xpath": "//Item[@type='Field' and name='floatDoc']/html_code"
+                    "File": "Aras\\Form_ManageFloatingDocuments_FloatDoc.html",
+                    "XPath": "//Item[@type='Field' and name='floatDoc']/html_code"
                 }
             ]
         },
         {
-            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_AddFloatClient.xml",
-            "nodes": [
+            "AmlFile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_AddFloatClient.xml",
+            "Nodes": [
                 {
-                    "file": "Aras\\Method_Custom_AddFloatClient.js",
-                    "xpath": "//method_code"
+                    "File": "Aras\\Method_Custom_AddFloatClient.js",
+                    "XPath": "//method_code"
                 }
             ]
         },
         {
-            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_AddFloatServer.xml",
-            "nodes": [
+            "AmlFile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_AddFloatServer.xml",
+            "Nodes": [
                 {
-                    "file": "Aras\\Method_Custom_AddFloatServer.cs",
-                    "xpath": "//method_code"
+                    "File": "Aras\\Method_Custom_AddFloatServer.cs",
+                    "XPath": "//method_code"
                 }
             ]
         },
         {
-            "amlfile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_RemoveFloatServer.xml",
-            "nodes": [
+            "AmlFile": "ArasExport\\FloatingDocuments\\Import\\Method\\Custom_RemoveFloatServer.xml",
+            "Nodes": [
                 {
-                    "file": "Aras\\Method_Custom_RemoveFloatServer.cs",
-                    "xpath": "//method_code"
+                    "File": "Aras\\Method_Custom_RemoveFloatServer.cs",
+                    "XPath": "//method_code"
                 }
             ]
         }
@@ -47,23 +47,22 @@
             "RemoteFile": "Innovator\\Server\\method-config.xml",
             "Nodes": [
                 {
-                    "file": "IncludeNamespaceConfig\\Custom_Structure.xml",
-                    "existencexpath": "/IncludeNamespaces/JavaScriptNamespace/class[@name='Custom_Structure']",
-                    "additionxpath": "/IncludeNamespaces/JavaScriptNamespace"
+                    "File": "IncludeNamespaceConfig\\Custom_Structure.xml",
+                    "ExistenceXPath": "/IncludeNamespaces/JavaScriptNamespace/class[@name='Custom_Structure']",
+                    "AdditionXPath": "/IncludeNamespaces/JavaScriptNamespace"
                 },
                 {
-                    "fragment": "<name>$(binpath)/BitAddict.Aras.Dll</name>",
-                    "existencexpath": "//MethodConfig/ReferencedAssemblies/name[text()='$(binpath)/BitAddict.Aras.Dll']",
-                    "additionxpath": "//MethodConfig/ReferencedAssemblies"
+                    "Fragment": "<name>$(binpath)/BitAddict.Aras.Dll</name>",
+                    "ExistenceXPath": "//MethodConfig/ReferencedAssemblies/name[text()='$(binpath)/BitAddict.Aras.Dll']",
+                    "AdditionXPath": "//MethodConfig/ReferencedAssemblies"
                 }
             ]
         }
     ],
     "ServerFiles": [
         {
-            "local": "InBasket\\InBasket-VoteDialog.aspx",
-            "remote": "Innovator\\Client\\scripts\\InBasket\\InBasket-VoteDialog.aspx"
+            "Local": "InBasket\\InBasket-VoteDialog.aspx",
+            "Remote": "Innovator\\Client\\scripts\\InBasket\\InBasket-VoteDialog.aspx"
         }
     ]
-
 }

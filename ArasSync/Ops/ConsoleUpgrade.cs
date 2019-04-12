@@ -1,12 +1,12 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using BitAddict.Aras.Data;
 using BitAddict.Aras.Security;
-using static BitAddict.Aras.ArasSyncTool.Ops.Common;
 
-namespace BitAddict.Aras.ArasSyncTool.Ops
+namespace BitAddict.Aras.ArasSync.Ops
 {
     internal static class ConsoleUpgrade
     {
@@ -16,7 +16,7 @@ namespace BitAddict.Aras.ArasSyncTool.Ops
             {
                 var r = "ConsoleUpgrade.exe";
 
-                if (ExistsOnPath(r))
+                if (Common.ExistsOnPath(r))
                     return r;
 
                 r = $@"..\ArasTools\ConsoleUpgrade\{r}";
@@ -38,7 +38,7 @@ namespace BitAddict.Aras.ArasSyncTool.Ops
             Console.WriteLine($"Importing {Path.GetFileName(mfFile)}...\n");
 
             string nullStr = null;
-            var rval = RunProcess(ConsoleUpgradeExe, false, ref nullStr,
+            var rval = Common.RunProcess(ConsoleUpgradeExe, false, ref nullStr,
                 $"server={arasDb.Url}",
                 $"database={arasDb.DbName}",
                 $"login={loginInfo.Username}",
@@ -75,7 +75,7 @@ namespace BitAddict.Aras.ArasSyncTool.Ops
             Console.WriteLine($"Exporting package {pkgName} via {Path.GetFileName(mfFile)} ...");
 
             string nullStr = null;
-            var rval = RunProcess(ConsoleUpgradeExe, false, ref nullStr,
+            var rval = Common.RunProcess(ConsoleUpgradeExe, false, ref nullStr,
                 $"server={arasDb.Url}",
                 $"database={arasDb.DbName}",
                 $"login={loginInfo.Username}",

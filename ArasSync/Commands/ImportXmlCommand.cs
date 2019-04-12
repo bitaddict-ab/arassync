@@ -1,13 +1,14 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using BitAddict.Aras.ArasSyncTool.Ops;
+using BitAddict.Aras.ArasSync.Ops;
 using JetBrains.Annotations;
 using ManyConsole;
-using XmlNode = BitAddict.Aras.ArasSyncTool.Data.XmlNode;
+using XmlNode = BitAddict.Aras.ArasSync.Data.XmlNode;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Imports XML fragments from arassync.json into Aras installation directory files

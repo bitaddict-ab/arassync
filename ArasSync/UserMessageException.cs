@@ -1,7 +1,9 @@
+// MIT License, see COPYING.TXT
+
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BitAddict.Aras.ArasSyncTool
+namespace BitAddict.Aras.ArasSync
 {
     /// <inheritdoc />
     ///  <summary>

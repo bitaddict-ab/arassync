@@ -1,9 +1,12 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using BitAddict.Aras.Security;
+using JetBrains.Annotations;
 using ManyConsole;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
+    [UsedImplicitly]
     class LoginCommand : ConsoleCommand
     {
         public string Username { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿// MIT License, see COPYING.TXT
+using System.Diagnostics.CodeAnalysis;
 using System.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

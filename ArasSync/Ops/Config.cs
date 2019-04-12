@@ -1,11 +1,12 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using BitAddict.Aras.Data;
 using Newtonsoft.Json;
 
-namespace BitAddict.Aras.ArasSyncTool.Ops
+namespace BitAddict.Aras.ArasSync.Ops
 {
     internal static class Config
     {
@@ -28,7 +29,7 @@ namespace BitAddict.Aras.ArasSyncTool.Ops
                 }
 
                 if (dir == null)
-                    throw new Exception("AmlSyncTool not run from '<repo>/<proj>/bin/release' folder?");
+                    throw new Exception("Failed to find arasdb.json");
 
                 return _solutionDir = new DirectoryInfo(dir);
             }

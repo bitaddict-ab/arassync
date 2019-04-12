@@ -1,9 +1,10 @@
-﻿using System;
-using BitAddict.Aras.ArasSyncTool.Ops;
+﻿// MIT License, see COPYING.TXT
+using System;
+using BitAddict.Aras.ArasSync.Ops;
 using JetBrains.Annotations;
 using ManyConsole;
 
-namespace BitAddict.Aras.ArasSyncTool.Commands
+namespace BitAddict.Aras.ArasSync.Commands
 {
     /// <summary>
     /// Updates an xml-tag in AML from on-disk code file

@@ -1,4 +1,5 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

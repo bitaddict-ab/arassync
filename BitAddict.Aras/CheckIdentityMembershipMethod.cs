@@ -1,11 +1,11 @@
-﻿using System;
+﻿// MIT License, see COPYING.TXT
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Aras.IOM;
 
 namespace BitAddict.Aras
 {
+    /// <inheritdoc />
     /// <summary>
     /// Check if user is an (possibly indirect) member of an identity group
     /// </summary>
