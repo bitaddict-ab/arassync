@@ -13,10 +13,14 @@ namespace BitAddict.Aras.UnitTests
     {
         private class XmlClass
         {
+            // ReSharper disable once StringLiteralTypo
             [XmlProperty("thestring")]
             public string String { get; set; }
+
+            // ReSharper disable once StringLiteralTypo
             [XmlProperty("thebool")]
             public bool Bool { get; set; }
+
             [XmlProperty]
             public int Int { get; set; }
         }

@@ -17,6 +17,7 @@ namespace BitAddict.Aras
         [XmlProperty("identity_name", true)]
         public string IdentityName { get; set; }
 
+        /// <inheritdoc />
         /// <summary>
         /// Check if user is an (possibly indirect) member of an identity group
         /// </summary>
