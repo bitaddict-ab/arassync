@@ -82,7 +82,7 @@ namespace BitAddict.Aras.ArasSync.Commands
 
         private static int RunDocu(string sourceFolder, string targetFolder)
         {
-            Console.WriteLine($"\nGenerating documentation ...");
+            Console.WriteLine("\nGenerating documentation ...");
 
             var docuExe = Path.Combine(Config.SolutionDir.FullName, "Docu", "docu.exe");
             string outputDummy = null;
@@ -99,6 +99,7 @@ namespace BitAddict.Aras.ArasSync.Commands
             {
                 Common.RequireLoginInfo(); // enforce logged in. Not same permissions as filecopy though, but something.
                 var arasDb = Config.FindDb(Database);
+                // ReSharper disable once StringLiteralTypo
                 targetFolder = Path.Combine(arasDb.BinFolder, "Innovator", "server", "bin", "htmldoc", featureName);
             }
             else if (Dir != null)

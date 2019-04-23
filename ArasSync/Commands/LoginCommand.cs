@@ -6,6 +6,9 @@ using ManyConsole;
 
 namespace BitAddict.Aras.ArasSync.Commands
 {
+    /// <summary>
+    /// Allows user to enter Aras credentials which are used to log in, run tests and read/write items in database
+    /// </summary>
     [UsedImplicitly]
     public class LoginCommand : ConsoleCommand
     {
@@ -23,6 +26,7 @@ namespace BitAddict.Aras.ArasSync.Commands
 
             HasOption("username=", "The user's Aras login name", n => Username = n);
             HasOption("password=", "The user's Aras password", p => Password = p);
+            // ReSharper disable once StringLiteralTypo
             HasOption("uselogininfo", "Don't ask for credentials if login info already exists",
                 _ => UseLoginInfo = true);
 

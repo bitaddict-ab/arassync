@@ -1,0 +1,7 @@
+﻿apiRules:
+- exclude:
+    uidRegex: '^System\.Object\..+$'
+    type: Member
+- exclude:
+    uidRegex: '^ManyConsole\.ConsoleCommand\..+$'
+    type: Member

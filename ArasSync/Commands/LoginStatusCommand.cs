@@ -6,6 +6,9 @@ using ManyConsole;
 
 namespace BitAddict.Aras.ArasSync.Commands
 {
+    /// <summary>
+    /// Detects if user has entered credentials or not
+    /// </summary>
     [UsedImplicitly]
     public class LoginStatusCommand : ConsoleCommand
     {

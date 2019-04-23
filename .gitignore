@@ -24,3 +24,6 @@ nunit-report.xml
 nunit-report.html
 resharper-inspect-report.html
 resharper-inspect-report.xml
+Docs/log.txt
+obj/
+Docs/articles/README.md

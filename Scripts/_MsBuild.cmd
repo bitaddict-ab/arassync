@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 
 REM https://github.com/Microsoft/vswhere
 set VSWHERE=%~dp0\..\bin\vswhere.exe
-set VSVERSION=[15.5,16.0)
+set VSVERSION=[15.5,17.0)
 set MSBUILD=
 
 echo.
