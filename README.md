@@ -1,8 +1,8 @@
-# README #
+# ArasSync #
 
-This repo contains tools and base classes for Aras Innovator PLM customizations.
+This repo contains tools and base classes for Aras Innovator PLM extensions.
 
-Code is developed & maintanted by Bit Addict AB, but copyright belongs to:
+Code is developed & maintained by Bit Addict AB, but copyright belongs to:
 
 * Consilum Marine & Safety AB
 * CPAC Systems AB
@@ -22,7 +22,8 @@ as well as database objects such as custom properties, fields, actions et.al.
 The scripts and tools found here allows developers to import, export, implement,
 build, test and deploy Aras Extensions with relative ease.
 
-In particular, features can be developed, tested and deployted on different environemnts/databased, like dev, test and production separately.
+In particular, features can be developed, tested and deployed on different environemnts/databased,
+like dev, test and production separately.
 
 ### How do I get set up? ###
 
@@ -70,7 +71,8 @@ Standard available commands are:
 
 #### Dependencies
 
- * Visual Studio 2017
+ * Aras Innovator PLM (SP9 DLLs included here, but feel free to replace with your own. The IOM interface doesn't change much).
+ * Visual Studio 2017 / 2019
  * Git
  * Optional: Jetbrains ReSharper VS addin (for formatting & style help)
  * Optional: EditorConfig VS addin (for consistent indentation)  - http://editorconfig.org/
@@ -82,14 +84,14 @@ arasdb.json & arasdb-local.json defines Aras instances (Web browser HTTP URL, II
 A single instance is defined to be used as the developer instance,
 which is were unit tests fetch data and integeration test methods are executed.
 
-Create arasdb-local.json if you have user-specific Aras databases/instances to test with.
+Create arasdb-local.json if you have user-specific Aras databases/instances to test with, such as on your own computer.
 
 #### How to run tests
 
  * Run 'arassync login' and enter login/password if required.
- * Run Scripts\UnitTests.cmd (some are more like integration tests)
+ * Run Scripts\UnitTests.cmd (though most talk to the server)
 
-You can also run them from within Visual Studio by installing right-clicking a project.
+You can also run them from within Visual Studio by right-clicking a project and choose "Run Unit Tests", if it has any tests in it..
 
 Tests aare currently a mix of MSTest and NUnit framework, but we plan to migrate fully to NUnit.
 
@@ -100,30 +102,40 @@ Tests aare currently a mix of MSTest and NUnit framework, but we plan to migrate
 
  Use 'arassync forall \<command> \<args>' to run a command for all features (i.e subdirs with 'amlsync.json') in repo.
 
-### Contribution guidelines ###
+### Contributing
 
-#### Writing tests
+TODO: Tell the community how they can contribute to your project.
 
-Add unit tests and/or integration tests using MS Unittest Framework or NUnit (preferred=.
+1. Fork it!
+2. Create your feature branch: git checkout -b my-new-feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request
 
-Unit Test classes should:
-
- * inherit BitAddict.Aras.Test.ArasUnitTestBase and reimplement ClassInitialize/ClassCleanup.
- * or, inherit BitAddict.Aras.Test.ArasNUnitTestBase and reimplement ClassInitialize/ClassCleanup tagged with [SetUp]/[TearDown].
-
-#### Code review
+#### Guidelines
 
 Use EditorConfig and Resharper to get a consistent formatting.
-
-#### Other guidelines
 
 To get good and consistent logging and automated error handling, server methods should
 inherit ArasMethod and use the custom ApplyXXX methods.
 
-### Who do I talk to? ###
+#### Tests
+
+Add unit tests and/or integration tests using MS Unittest Framework or NUnit (the latter is preferred).
+
+Test classes that talk to Aras should:
+
+* inherit BitAddict.Aras.Test.ArasUnitTestBase and reimplement ClassInitialize/ClassCleanup.
+* or, inherit BitAddict.Aras.Test.ArasNUnitTestBase and reimplement ClassInitialize/ClassCleanup tagged with [SetUp]/[TearDown].
+
+Tests that require code on the server should be categorized as "IntegrationTests".
+
+
+### Credits / Responsibles ###
 
 * Marcus Sonestedt (marcus.lindblom.sonestedt@bitaddict.se)
 * Jimmy Börjesson (jimmy.borjesson@bitaddict.se)
 * Daniel Jonsson (daniel.jonsson@bitaddict.se)
+
 * Per Olsson (per.olsson@consilium.se)
 * Victor Stensson (victor.stensson@cpacsystems.se)
