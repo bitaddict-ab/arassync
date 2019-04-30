@@ -9,7 +9,10 @@ using static ManyConsole.ConsoleCommandDispatcher;
 
 namespace BitAddict.Aras.ArasSync
 {
-    internal static class Program
+    /// <summary>
+    /// Main program for ArasSync. Mainly defers to <see cref="ManyConsole.ConsoleCommandDispatcher"/>
+    /// </summary>
+    public static class Program
     {
         private static int Main(string[] args)
         {

@@ -3,7 +3,12 @@ using System;
 
 namespace BitAddict.Aras.ArasSync
 {
-    internal class CommandCategoryAttribute : Attribute
+    /// <inheritdoc />
+    /// <summary>
+    /// Defines what cateogry an ArasSync command belongs to.
+    /// Used when printing help text.
+    /// </summary>
+    public class CommandCategoryAttribute : Attribute
     {
         public CommandCategoryAttribute(string category)
         {
