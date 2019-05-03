@@ -146,8 +146,7 @@ namespace BitAddict.Aras
 
             lock (ActiveLogfiles)
             {
-                ConcurrentLogFiles clf;
-                if (!ActiveLogfiles.TryGetValue(baseName, out clf))
+                if (!ActiveLogfiles.TryGetValue(baseName, out var clf))
                 {
                     clf = new ConcurrentLogFiles();
                     ActiveLogfiles.Add(baseName, clf);

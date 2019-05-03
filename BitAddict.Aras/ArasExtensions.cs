@@ -47,7 +47,8 @@ namespace BitAddict.Aras
 
                 return ThreadInnovator.Value;
             }
-            internal set { ThreadInnovator.Value = value; } // set from unit tests
+            internal set => ThreadInnovator.Value = value; // set from unit tests
+            
         }
 
         /// <summary>
@@ -66,6 +67,7 @@ namespace BitAddict.Aras
             {
                 var method = (TMethod)Activator.CreateInstance(typeof(TMethod));
                 var result = method.DoApply(i);
+                // ReSharper disable once SuspiciousTypeConversion.Global
                 (method as IDisposable)?.Dispose();
                 return result;
             }, item);
@@ -154,8 +156,7 @@ namespace BitAddict.Aras
                           $"  ]]>\n" +
                           "</MethodException>\n";
 
-                var ae = e as AggregateException;
-                if (ae != null)
+                if (e is AggregateException ae)
                     foreach (var ie in ae.InnerExceptions)
                         exceptions.Enqueue(ie);
                 else if (e.InnerException != null)
