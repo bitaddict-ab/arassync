@@ -1,10 +1,10 @@
 .vs/
 *.user
 *.suo
-*/bin/*
 */obj/*
 */doc/*
-*/*/bin/*
+!bin/
+**/bin/**
 */*/obj/*
 */log/*
 arasdb-local.json
@@ -29,3 +29,4 @@ obj/
 Docs/articles/README.md
 MigrationBackup/
 Cpac.Aras.sln*
+ArasSync/bin/
