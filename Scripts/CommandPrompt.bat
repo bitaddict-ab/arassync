@@ -20,7 +20,7 @@ IF ERRORLEVEL 1 (
 :: Build ArasSync so that the exe is up-to-date and available in PATH
 
 echo === Building ArasSync in Release ===
-call %~dp0\_MSBuild.cmd "%~dp0\..\ArasSync\ArasSync.csproj" /p:Configuration=Release /Verbosity:minimal /nologo
+call %~dp0\_MSBuild.cmd "%CD%\ArasSync\ArasSync.csproj" /p:Configuration=Release /Verbosity:minimal /nologo
 
 IF ERRORLEVEL 1 (
   echo Failed to build ArasSync! Something is wrong.
@@ -28,7 +28,8 @@ IF ERRORLEVEL 1 (
   exit /b 1
 )
 
-set PATH=%~dp0\ArasSync\bin\Release;%PATH%
+set PATH=%CD%\ArasSync\bin\Release;%PATH%
+
 @echo on
 ArasSync about
 @echo off
