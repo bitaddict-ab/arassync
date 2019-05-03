@@ -1,0 +1,6 @@
+<imports>
+    <!-- This file modifies Core aras Items, so we need to refer to that package -->
+    <package name="com.aras.innovator.solution.PLM" path="PLM\Import">
+      <dependson name="com.aras.innovator.solution.ApplicationCore" />
+    </package>
+</imports>
