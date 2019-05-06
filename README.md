@@ -55,7 +55,7 @@ Advanced available commands are:
 Standard available commands are:
 
     About       - Shows full license/copyright notice
-    CopyDLL     - Builds and copies DLLs & docs for the current feature to the Aras Web Server bin folder
+    DeployDLL   - Builds and copies DLLs & docs for the current feature to the Aras Web Server bin folder
     Deploy      - Deploy the current directory's feature into the Aras instance
     Export      - Exports the current directory's feature from Aras database to disk
     ImportAML   - Imports the current directory's AML from local disc into an Aras database

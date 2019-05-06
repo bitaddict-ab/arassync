@@ -8,7 +8,7 @@
       "binFolder": "C:\\Program Files (x86)\\Aras\\Innovator"
     }
   ],
-  "CopyDll": {
+  "DeployDll": {
     "Extensions": [ ".dll", ".pdb" ],
     "Excludes": [
       "Aras.Diagnostics",

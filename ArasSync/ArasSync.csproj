@@ -80,7 +80,7 @@
     <Compile Include="Commands\RunAmlCommand.cs" />
     <Compile Include="Commands\UploadDocCommand.cs" />
     <Compile Include="Commands\ForAllCommand.cs" />
-    <Compile Include="Commands\CopyDllCommand.cs" />
+    <Compile Include="Commands\DeployDllCommand.cs" />
     <Compile Include="Commands\ImportFilesCommand.cs" />
     <Compile Include="Ops\Config.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

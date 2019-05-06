@@ -13,7 +13,7 @@ namespace BitAddict.Aras.ArasSync.Commands
     /// Build and copies DLLs
     /// </summary>
     [UsedImplicitly]
-    public class CopyDllCommand : ConsoleCommand
+    public class DeployDllCommand : ConsoleCommand
     {
         public bool Confirm { get; set; } = true;
         public bool Build { get; set; } = true;
@@ -22,9 +22,9 @@ namespace BitAddict.Aras.ArasSync.Commands
         public string BuildConfig { get; set; } = "Release";
         public bool Doc { get; set; } = true;
 
-        public CopyDllCommand()
+        public DeployDllCommand()
         {
-            IsCommand("CopyDLL", "Builds and copies DLLs & docs for the current feature to the Aras Web Server bin folder");
+            IsCommand("DeployDLL", "Builds and copies DLLs & docs for the current feature to the Aras Web Server bin folder");
 
             HasOption("dir=|directory=", "Directory to copy to", dir => Dir = dir);
             HasOption("db=|database=", "Database Id to copy to", db => Database = db);
@@ -89,7 +89,7 @@ namespace BitAddict.Aras.ArasSync.Commands
             if (targetFolder == null)
                 throw new ArgumentNullException(nameof(targetFolder), "internal error");
 
-            var info = Config.GetCopyDllInfo();
+            var info = Config.GetDeployDllInfo();
 
             Console.WriteLine($"About to copy [{string.Join(",", info.Extensions.Distinct().Select(e => $"*{e}"))}]\n" +
                               $"  from: {sourceFolder}\n" +

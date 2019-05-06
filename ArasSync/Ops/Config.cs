@@ -55,7 +55,7 @@ namespace BitAddict.Aras.ArasSync.Ops
             return arasDb;
         }
 
-        internal static CopyDllInfo GetCopyDllInfo()
+        internal static DeployDllInfo GetDeployDllInfo()
         {
             var arasConf = (new[] {"arasdb-local.json", "arasdb.json"}
                 .Select(mfFile => Path.Combine(SolutionDir.FullName, mfFile))
@@ -67,10 +67,10 @@ namespace BitAddict.Aras.ArasSync.Ops
             if (arasConf == null)
                 throw new UserMessageException($"No arasdb(-local).json found at {SolutionDir.FullName}.");
 
-            if (arasConf.CopyDll == null)
-                throw new UserMessageException("No CopyDll section found in arasdb(-local).json.");
+            if (arasConf.DeployDll == null)
+                throw new UserMessageException("No DeployDll section found in arasdb(-local).json.");
 
-            return arasConf.CopyDll;
+            return arasConf.DeployDll;
         }
     }
 }

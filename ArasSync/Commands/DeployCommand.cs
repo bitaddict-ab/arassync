@@ -50,7 +50,7 @@ namespace BitAddict.Aras.ArasSync.Commands
                 AmlSyncFile = AmlSyncFile,
                 Confirm = false,
             }.Run(new string[] { });
-            new CopyDllCommand
+            new DeployDllCommand
             {
                 Database = Database,
                 Confirm = false,
