@@ -25,7 +25,7 @@ namespace BitAddict.Aras.Data
         /// <summary>
         /// File copying information
         /// </summary>
-        public CopyDllInfo CopyDll { get; set; }
+        public DeployDllInfo DeployDll { get; set; }
     }
 
     /// <summary>
@@ -43,21 +43,21 @@ namespace BitAddict.Aras.Data
         /// </summary>
         public string Url { get; set; }
         /// <summary>
-        /// Database name as in web login dialgo
+        /// Database name as in web login dialog
         /// </summary>
         public string DbName { get; set; }
         /// <summary>
-        /// Web server 'binaries', i.e. c:\program files (x86)\Aras\TheInstance\
+        /// Web server 'binaries', i.e. C:\Program Files (x86)\Aras\TheInstance\
         /// </summary>
         public string BinFolder { get; set; }
     }
 
     /// <summary>
-    /// Configures copyDLL command with extensions and exclusions
+    /// Configures DeployDLL command with extensions and exclusions
     /// </summary>    
     [UsedImplicitly]
     [SuppressMessage("ReSharper", "AutoPropertyCanBeMadeGetOnly.Global")]
-    public class CopyDllInfo
+    public class DeployDllInfo
     {
         /// <summary>
         /// Copies these extensions only
