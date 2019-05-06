@@ -1,0 +1,50 @@
+{
+  "amlfragments": [
+    {
+      "amlfile": "ArasExport\\GetExternalUrl\\Import\\Method\\BitAddict_GetExternalUrl.xml",
+      "nodes": [
+        {
+          "file": "Aras\\Method_BitAddict_GetExternalUrl.cs",
+          "xpath": "//method_code"
+        }
+      ]
+    },
+    {
+      "amlfile": "ArasExport\\GetExternalUrl\\Import\\Method\\BitAddict_GetExternalUrl_Clicked.xml",
+      "nodes": [
+        {
+          "file": "Aras\\Method_BitAddict_GetExternalUrl_Clicked.js",
+          "xpath": "//method_code"
+        }
+      ]
+    },
+    {
+      "amlfile": "ArasExport\\PLM\\Import\\Form\\Part.xml",
+      "nodes": [
+        {
+          "file": "Aras\\Form_BitAddict_GetExternalUrl_Snackbar.html",
+          "xpath": "//Item[@id='FF93C32EDF144F1BA3F5BCD3EC972BE6']/html_code"
+        }
+      ]
+    }
+
+  ],
+  "XmlFragments": [
+    {
+      "RemoteFile": "Innovator\\Server\\method-config.xml",
+      "Nodes": [
+        {
+          "fragment": "<name>$(binpath)/BitAddict.Aras.dll</name>",
+          "existencexpath": "//MethodConfig/ReferencedAssemblies/name[text()='$(binpath)/BitAddict.Aras.dll']",
+          "additionxpath": "//MethodConfig/ReferencedAssemblies"
+        },
+        {
+          "fragment": "<name>$(binpath)/BitAddict.Aras.ExternalUrlWidget.dll</name>",
+          "existencexpath": "//MethodConfig/ReferencedAssemblies/name[text()='$(binpath)/BitAddict.Aras.ExternalUrlWidget.dll']",
+          "additionxpath": "//MethodConfig/ReferencedAssemblies"
+        }
+
+      ]
+    }
+  ],
+}

@@ -1,0 +1,6 @@
+<imports>
+    <!-- This is our package, it depends on the PLM package where Part is defined -->
+    <package name="BitAddict.Aras.GetExternalUrl" path="GetExternalUrl\Import">
+        <dependson name="com.aras.innovator.solution.PLM" />
+    </package>
+</imports>

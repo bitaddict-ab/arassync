@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="Form" id="D95D1B10CE6D47CDB7AE755108DBA13D" action="add">
+  <name>Document</name>
+  <Relationships>
+   <Item type="Body" id="1616C23245254BAD80BECBEC29A02D16" action="add">
+    <source_id keyed_name="Document" type="Form">D95D1B10CE6D47CDB7AE755108DBA13D</source_id>
+    <Relationships>
+    </Relationships>
+   </Item >
+  </Relationships>
+ </Item>
+</AML>

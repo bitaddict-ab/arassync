@@ -1,0 +1,138 @@
+﻿<AML>
+ <Item type="Form" id="CAF99D0A8E6E44E9A681C38015FACE91" action="add">
+  <name>Part</name>
+  <Relationships>
+   <Item type="Body" id="83907DEF8B3044A08BDCBB77B1C0517E" action="add">
+    <source_id keyed_name="Part" type="Form">CAF99D0A8E6E44E9A681C38015FACE91</source_id>
+    <Relationships>
+     <Item type="Field" id="84317B0379CD4B49AC36A9342C02920B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">🔗</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>7424</sort_order>
+      <source_id keyed_name="83907DEF8B3044A08BDCBB77B1C0517E" type="Body">83907DEF8B3044A08BDCBB77B1C0517E</source_id>
+      <tab_stop>0</tab_stop>
+      <x>768</x>
+      <y>16</y>
+      <name>bitaddict_getexternalurl</name>
+      <Relationships>
+       <Item type="Field Event" id="78D8003BEF4444D199EFAD8C48EA410B" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="BitAddict_GetExternalUrl_Clicked" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>BitAddict_GetExternalUrl_Clicked</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="bitaddict_getexternalurl" type="Field">84317B0379CD4B49AC36A9342C02920B</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="Field" id="FF93C32EDF144F1BA3F5BCD3EC972BE6" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>html</field_type>
+      <font_color>#000000</font_color>
+      <font_family>tahoma, arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <html_code><![CDATA[<!-- snackbar from https://www.w3schools.com/howto/howto_js_snackbar.asp -->
+<style>
+  #bitaddict_getexternalurl_snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+
+  #bitaddict_getexternalurl_snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @-webkit-keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      bottom: 30px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    to {
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+</style>
+
+<div id="bitaddict_getexternalurl_snackbar">URL copied to clipboard</div>
+]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>7552</sort_order>
+      <source_id keyed_name="83907DEF8B3044A08BDCBB77B1C0517E" type="Body">83907DEF8B3044A08BDCBB77B1C0517E</source_id>
+      <tab_stop>1</tab_stop>
+      <x>19</x>
+      <y>415</y>
+      <name>getexternalurl_snackbar</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

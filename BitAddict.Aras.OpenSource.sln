@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{B026
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docs", "Docs\Docs.csproj", "{38E9DA57-7ACE-4AC6-98B8-FE33E423D8E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitAddict.Aras.ExternalUrlWidget", "BitAddict.Aras.ExternalUrlWidget\BitAddict.Aras.ExternalUrlWidget.csproj", "{CDED1774-B5BC-4245-A19E-265ABCEBC89A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,10 @@ Global
 		{9D0437E4-0228-4A6E-9CFD-E0FB6B7F3758}.Release|Any CPU.Build.0 = Release|Any CPU
 		{38E9DA57-7ACE-4AC6-98B8-FE33E423D8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38E9DA57-7ACE-4AC6-98B8-FE33E423D8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDED1774-B5BC-4245-A19E-265ABCEBC89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDED1774-B5BC-4245-A19E-265ABCEBC89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDED1774-B5BC-4245-A19E-265ABCEBC89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDED1774-B5BC-4245-A19E-265ABCEBC89A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
