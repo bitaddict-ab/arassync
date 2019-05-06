@@ -141,9 +141,7 @@ namespace BitAddict.Aras
         public static string LogException(string msg, Exception exception)
         {
             var errMsg = msg;
-
-            var exceptions = new Queue<Exception>();
-            exceptions.Enqueue(exception);
+            var exceptions = new Queue<Exception>(new[] {exception});
 
             while (exceptions.Any())
             {
@@ -151,9 +149,9 @@ namespace BitAddict.Aras
                 errMsg += "\n<MethodException>\n" +
                           $"  {e.GetType()}: {e.Message}\n" +
                           $"  {e.Source}\n" +
-                          $"  <![CDATA[\n" +
+                          "  <![CDATA[\n" +
                           $"{e.StackTrace}\n" +
-                          $"  ]]>\n" +
+                          "  ]]>\n" +
                           "</MethodException>\n";
 
                 if (e is AggregateException ae)
@@ -187,30 +185,24 @@ namespace BitAddict.Aras
         internal static Item WithLogger(string methodLogFile, Innovator innovator,
             Func<Item> action)
         {
-            if (ThreadLogger.Value == null || ThreadInnovator.Value == null)
-            {
-                using (var logger = new Logger(methodLogFile))
-                {
-                    ThreadLogger.Value = logger;
-                    ThreadInnovator.Value = innovator;
-
-                    try
-                    {
-                        return action();
-                    }
-                    finally
-                    {
-                        // BUG: Should not clear on recursive method calls
-
-                        ThreadLogger.Value = null;
-                        ThreadInnovator.Value = null;
-                    }
-                }
-            }
-            else
-            {
-                // This happens when one of our Aras methods directly or indirectly calls another of our Aras methods.
+            // This happens when one of our Aras methods directly or indirectly calls another of our Aras methods.
+            if (ThreadLogger.Value != null && ThreadInnovator.Value != null)
                 return action();
+
+            using (var logger = new Logger(methodLogFile))
+            {
+                ThreadLogger.Value = logger;
+                ThreadInnovator.Value = innovator;
+
+                try
+                {
+                    return action();
+                }
+                finally
+                {
+                    ThreadLogger.Value = null;
+                    ThreadInnovator.Value = null;
+                }
             }
         }
 
@@ -269,17 +261,18 @@ namespace BitAddict.Aras
         /// <summary>
         /// Run and log Item query
         /// </summary>
-        /// <param name="innovator"></param>
+        /// <param name="_"></param>
         /// <param name="item"></param>
         /// <param name="logResult"></param>
         /// <returns></returns>
         /// <exception cref="ArasException"></exception>
         [NotNull]
-        public static Item ApplyItem(this Innovator innovator, [NotNull] Item item, bool logResult = true)
+        // ReSharper disable once UnusedParameter.Global
+        public static Item ApplyItem(this Innovator _, [NotNull] Item item, bool logResult = true)
         {
             Log($"<ApplyItem logresult='{logResult}'>\n  <input>\n{FormatXml(item.node)}\n  </input>\n");
 
-            var result = LogTime(() => item.apply(), "QueryTime");
+            var result = LogTime(item.apply, "QueryTime");
 
             if (logResult)
             {
@@ -318,8 +311,7 @@ namespace BitAddict.Aras
         {
             Log($"<GetItemByKeyedName>\n  <input>\n    type = '{itemType}', keyedName = '{keyedName}'\n  </input>\n");
 
-            var mock = innovator as MockInnovator;
-            var result = mock != null
+            var result = innovator is MockInnovator mock
                 ? mock.getItemByKeyedName(itemType, keyedName)
                 : LogTime(() => innovator.getItemByKeyedName(itemType, keyedName), "QueryTime");
 
@@ -348,8 +340,7 @@ namespace BitAddict.Aras
         {
             Log($"<GetItemByID>\n  <input>\n    type = '{itemType}', id = '{id}'\n  </input>\n");
 
-            var mock = innovator as MockInnovator;
-            var result = mock != null
+            var result = innovator is MockInnovator mock
                 ? mock.getItemById(itemType, id)
                 : LogTime(() => innovator.getItemById(itemType, id), "QueryTime");
 
@@ -396,14 +387,15 @@ namespace BitAddict.Aras
         /// <summary>
         /// Run and log fetchRelationships query
         /// </summary>
-        /// <param name="innovator"></param>
+        /// <param name="_"></param>
         /// <param name="item"></param>
         /// <param name="relationShipTypeName"></param>
         /// <param name="selectList"></param>
         /// <returns></returns>
         /// <exception cref="ArasException"></exception>
         [NotNull]
-        public static Item FetchRelationships(this Innovator innovator, [NotNull] Item item, string relationShipTypeName, string selectList = "related_id(*)")
+        // ReSharper disable once UnusedParameter.Global
+        public static Item FetchRelationships(this Innovator _, [NotNull] Item item, string relationShipTypeName, string selectList = "related_id(*)")
         {
             Log($"<FetchRelationships type='{relationShipTypeName}' " +
                 $"selectList='{selectList}'>\n" +
@@ -530,7 +522,7 @@ namespace BitAddict.Aras
         /// <param name="node">node to print</param>
         /// <param name="indent">default indent</param>
         /// <returns></returns>
-        static public string FormatXml(this XmlNode node, int indent = 4)
+        public static string FormatXml(this XmlNode node, int indent = 4)
         {
             if (node == null)
                 return "(null)";
