@@ -44,9 +44,12 @@ namespace BitAddict.Aras.ArasSync.Commands
             Common.RequireArasFeatureManifest();
             var featureName = Common.GetFeatureName();
 
-            if (!Directory.EnumerateFiles(Environment.CurrentDirectory, "*.csproj").Any())
+            var csproj = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.csproj")
+                .SingleOrDefault();
+
+            if (csproj == null)
             {
-                Console.WriteLine("No .csproj here. Nothing to do.");
+                Console.WriteLine("No (or multiple) .csproj found. Cannot continue.");
                 return 0;
             }
 
@@ -54,10 +57,13 @@ namespace BitAddict.Aras.ArasSync.Commands
             {
                 Console.WriteLine($"Building {featureName} in {BuildConfig}...\n");
 
+
                 string nullStr = null;
-                if (Common.RunProcess("msbuild", false, ref nullStr,
+                if (Common.RunProcess(Common.MSBuildCmd, false, ref nullStr,
+                    csproj,
                     $"/p:Configuration={BuildConfig}",
                     "/verbosity:minimal",
+                    "/filelogger",
                     "/nologo") != 0)
                 {
                     throw new UserMessageException("Build failed");

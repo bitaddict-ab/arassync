@@ -16,6 +16,23 @@ namespace BitAddict.Aras.ArasSync.Ops
 {
     internal static class Common
     {
+        internal static string ScriptsFolder
+        {
+            get {
+                var d = Environment.CurrentDirectory;
+
+                while (!Directory.Exists(Path.Combine(d, "Scripts")))
+                    d = Directory.GetParent(d).FullName;
+
+                if (d == Path.GetPathRoot(d))
+                    throw new InvalidOperationException("Failed to find scripts folder");
+
+                return Path.Combine(d, "Scripts");
+            }
+        }
+
+        internal static string MSBuildCmd => Path.Combine(ScriptsFolder, "_MSbuild.cmd");
+
         /// <summary>
         /// runs a process and captures stdout into string, ignores stderr
         /// </summary>
