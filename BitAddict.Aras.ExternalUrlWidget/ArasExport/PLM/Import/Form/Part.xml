@@ -47,79 +47,85 @@
       <font_weight>bold</font_weight>
       <html_code><![CDATA[<!-- snackbar from https://www.w3schools.com/howto/howto_js_snackbar.asp -->
 <style>
-  #bitaddict_getexternalurl_snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-  }
-
-  #bitaddict_getexternalurl_snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  }
-
-  @-webkit-keyframes fadein {
-    from {
-      bottom: 0;
-      opacity: 0;
+    #bitaddict_externalurl_link {
+        background: #3668b1;
+        font-size: 12px;
+        padding: 3px;
+        margin: 1px;
     }
 
-    to {
-      bottom: 30px;
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadein {
-    from {
-      bottom: 0;
-      opacity: 0;
-    }
-
-    to {
-      bottom: 30px;
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes fadeout {
-    from {
-      bottom: 30px;
-      opacity: 1;
+    #bitaddict_externalurl_snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
     }
 
-    to {
-      bottom: 0;
-      opacity: 0;
-    }
-  }
-
-  @keyframes fadeout {
-    from {
-      bottom: 30px;
-      opacity: 1;
+    #bitaddict_externalurl_snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
 
-    to {
-      bottom: 0;
-      opacity: 0;
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
     }
-  }
+
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
 </style>
 
-<div id="bitaddict_getexternalurl_snackbar">URL copied to clipboard</div>
-]]></html_code>
+<div id="bitaddict_externalurl_snackbar">URL copied to clipboard</div>]]></html_code>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
       <label_position>top</label_position>

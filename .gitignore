@@ -4,6 +4,7 @@
 */obj/*
 */doc/*
 !bin/
+!Bin/
 **/bin/**
 */*/obj/*
 */log/*

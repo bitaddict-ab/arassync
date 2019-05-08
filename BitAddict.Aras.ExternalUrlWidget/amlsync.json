@@ -22,12 +22,11 @@
       "amlfile": "ArasExport\\PLM\\Import\\Form\\Part.xml",
       "nodes": [
         {
-          "file": "Aras\\Form_BitAddict_GetExternalUrl_Snackbar.html",
+          "file": "Aras\\BitAddict_GetExternalUrl_Snackbar.html",
           "xpath": "//Item[@id='FF93C32EDF144F1BA3F5BCD3EC972BE6']/html_code"
         }
       ]
     }
-
   ],
   "XmlFragments": [
     {
@@ -45,6 +44,29 @@
         }
 
       ]
+    },
+    {
+      "RemoteFile": "Innovator\\Client\\javascript\\IncludeNamespaceConfig.xml",
+      "Nodes": [
+        {
+          "fragment": "<file src=\"Customer\\BitAddict_GetExternalUrl.js\"/>",
+          "existencexpath": "//class[@name='ScriptSet1']/dependencies/file[@src='Customer\\BitAddict_GetExternalUrl.js']",
+          "additionxpath": "//class[@name='ScriptSet1']/dependencies"
+        }
+      ]
     }
   ],
+  "ServerFiles": [
+    {
+      "Local": "Aras\\Customer_BitAddict_GetExternalUrl.js",
+      "Remote": "Innovator\\Client\\Javascript\\Customer\\BitAddict_GetExternalUrl.js"
+    },
+    {
+      "Local": "Aras\\BitAddict_GetExternalUrl_Snackbar.html",
+      "Remote": "Innovator\\Client\\Customer\\BitAddict_GetExternalUrl_Snackbar.html"
+    }
+
+  ]
 }
+
+
