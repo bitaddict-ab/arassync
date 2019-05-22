@@ -1,0 +1,837 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Dev/cpac-aras-plm/Docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "6aqeib2bFyg2RiqYEgKzYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/README.html",
+          "hash": "etCQjYHvo010FtE11ChDOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "Bza7jvHly6+yp1ls7HgFnQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "P/eRyoclmAa8K8vTZp6UsQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasException.html",
+          "hash": "jF5VpJT2UKyaK4ovU7BuNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasExtensions.html",
+          "hash": "pjpZgp5LfhOt4GJ/7uk4yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasMethod.html",
+          "hash": "BtTb7nzsItUEDnG8WI0aUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasOps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasOps.html",
+          "hash": "ytA5Btslhw0uSys/VlLreQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasPermissionGrant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasPermissionGrant.html",
+          "hash": "3xjegZe8+wdB2zH26Yq/oA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.CommandCategoryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.CommandCategoryAttribute.html",
+          "hash": "79b25O112j2ys4K/kJWkCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.AboutCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.AboutCommand.html",
+          "hash": "hBiP7HqFu2koql7kQs//ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.CopyDllCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.CopyDllCommand.html",
+          "hash": "H2GheShYUZxbGkL8ooP2KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.DeployCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.DeployCommand.html",
+          "hash": "G+LWPwDhwsoDoGzHv+Y7OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ExportCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ExportCommand.html",
+          "hash": "YBFZOd53YD/deNkj6czeJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ExtractAllCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ExtractAllCommand.html",
+          "hash": "tZGboUzxnFWxPuStkSq1uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ExtractAmlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ExtractAmlCommand.html",
+          "hash": "psNAn7b9uOmwbu3/4AQujQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ForAllCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ForAllCommand.html",
+          "hash": "k5X9LKmszLQ4pRdl9vaxRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ImportAmlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ImportAmlCommand.html",
+          "hash": "GC+sy2u3kKwD0/JCFq6Hig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ImportFilesCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ImportFilesCommand.html",
+          "hash": "el2c1XcDtEEylKN4s9790Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ImportXmlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ImportXmlCommand.html",
+          "hash": "n4Co9tIRX/3Jn6sC81u1yQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ListDbCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ListDbCommand.html",
+          "hash": "667BP1C+kdszpLd3y1bTRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.LoginCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.LoginCommand.html",
+          "hash": "7w5bO6HL6ti7ec7HLnr7qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.LoginStatusCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.LoginStatusCommand.html",
+          "hash": "xfRY2RknBtCGc2AC4Q6KbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.LogoutCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.LogoutCommand.html",
+          "hash": "nCQZYKFw5rVapr17B+X39w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.MergeAllCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.MergeAllCommand.html",
+          "hash": "AQvEHEb6BvpHkxlmns+uSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.MergeAmlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.MergeAmlCommand.html",
+          "hash": "Is/0lP8Dyxfue9Frffq1Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.ReplaceServerItemsCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.ReplaceServerItemsCommand.html",
+          "hash": "H1Hals177mxP2Z3fpMjv/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.RunAmlCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.RunAmlCommand.html",
+          "hash": "S1np6aS4mFjq2SAO/AJ1eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.UploadDocCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.UploadDocCommand.html",
+          "hash": "RZRMnalD5UAvIbCJH/zQyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Commands.html",
+          "hash": "qmxxAEm9TejMaNd9fYzDkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.AmlFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.AmlFragment.html",
+          "hash": "Ey20DvRkWYQSGEuwJxktYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.AmlNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.AmlNode.html",
+          "hash": "xcRd8OZuw45w6xgV1sVD8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.ArasFeatureManifest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.ArasFeatureManifest.html",
+          "hash": "/rH7LVZhj7B9vB4Ta6dpRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.ClientFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.ClientFile.html",
+          "hash": "vxBHYbrNGAX1Q/f6ptsKDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.XmlFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.XmlFragment.html",
+          "hash": "H8dvxC83Lol8KsRP334kQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.XmlNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.XmlNode.html",
+          "hash": "QY+anae+QxOxkvhUo2rUrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Data.html",
+          "hash": "vd4ugplQ7AfbLP3/pCFREA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Ops.XmlNodeExentensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Ops.XmlNodeExentensions.html",
+          "hash": "R/O223r+g19dIyA2PuOEJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Ops.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Ops.html",
+          "hash": "A+HGcbQcA1huVwVcTbZDRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.Program.html",
+          "hash": "//5aQYxUTK1Q3Sptt3hQ6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.UserMessageException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.UserMessageException.html",
+          "hash": "x1Wqzvt94c8DsmcvNBHxPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ArasSync.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ArasSync.html",
+          "hash": "P+73x5Wp7B7ajTTOEALBdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.CheckIdentityMembershipMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.CheckIdentityMembershipMethod.html",
+          "hash": "+eq4iH0niH7xFQIWB5ffLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Data.ArasConfManifest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Data.ArasConfManifest.html",
+          "hash": "7dl8NW27id9Py4qMlHX+ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Data.ArasDb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Data.ArasDb.html",
+          "hash": "RUHuXfRvOeh+fda/lXXU2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Data.CopyDllInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Data.CopyDllInfo.html",
+          "hash": "X2g4A9vuaKg9YgrHgNxdQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Data.html",
+          "hash": "lDF8IAWCpcjKMVRWUJgm3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ItemIdComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ItemIdComparer.html",
+          "hash": "O7+X+h9k1xhhhgYh5K2cpg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.ItemLock.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.ItemLock.html",
+          "hash": "g+SIEFO5eBSNkULvRGrb8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Logger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Logger.html",
+          "hash": "imVW8mFjwTt3bsFNyo8Yeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.MockInnovator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.MockInnovator.html",
+          "hash": "7OfWYk13lbBepDqBioacgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.NaturalSortComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.NaturalSortComparer.html",
+          "hash": "bi6hCM83inPCsxXK+TF6IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Security.LoginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Security.LoginInfo.html",
+          "hash": "NDQyzFGCYi6kcq93kGlNrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Security.html",
+          "hash": "JkhRbWPrwJrClsLDD4O5sQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Test.ArasNUnitTestBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Test.ArasNUnitTestBase.html",
+          "hash": "gYuYTS1X6oL8/U/+q5q8Bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Test.ArasUnitTestBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Test.ArasUnitTestBase.html",
+          "hash": "uOMHWljwaiSrH+8QJMVcuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.Test.html",
+          "hash": "JSUFwlh0KBEEv1dBSc7FVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.UnitTests.TestArasExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.UnitTests.TestArasExtensions.html",
+          "hash": "6n3Vhp8/SEiRg/gNCOlMLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.UnitTests.TestCheckIdentityMembership.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.UnitTests.TestCheckIdentityMembership.html",
+          "hash": "qABlch1umxLsAAexglGrgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.UnitTests.TestLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.UnitTests.TestLogger.html",
+          "hash": "tJnGk4opS3UvPHyfSZ9IYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.UnitTests.TestLoginInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.UnitTests.TestLoginInfo.html",
+          "hash": "PC2VR9+poK4ZE9Luxs+pJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.UnitTests.TestXmlPropertyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.UnitTests.TestXmlPropertyAttribute.html",
+          "hash": "V3xnFHi1fg1NlDV9N6Pp3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.UnitTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.UnitTests.html",
+          "hash": "WykkKv/DlHW2HXqY3vp97Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.XmlPropertyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.XmlPropertyAttribute.html",
+          "hash": "UH2+/oEQjUPae+KgzqgKXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/BitAddict.Aras.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BitAddict.Aras.html",
+          "hash": "z+ylQjXL+LJkQAaQkpoGNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 61,
+          "skipped_file_count": 7
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 4
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

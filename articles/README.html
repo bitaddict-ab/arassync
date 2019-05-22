@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ArasSync </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="ArasSync ">
+    <meta name="generator" content="docfx 2.42.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/README.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="API Documentation">API Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="README.html" title="Readme" class="active">Readme</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="arassync">ArasSync</h1>
+
+<p>This repo contains tools and base classes for Aras Innovator PLM extensions.</p>
+<p>Code is developed &amp; maintained by Bit Addict AB, but copyright belongs to:</p>
+<ul>
+<li>Consilum Marine &amp; Safety AB</li>
+<li>CPAC Systems AB</li>
+</ul>
+<p>This code has been developed, paid for and generously licensed under the MIT license by the above compaines
+See COPYING.TXT for full license/copyright information.</p>
+<h3 id="what-is-this-repository-for">What is this repository for?</h3>
+<h4 id="quick-summary">Quick summary</h4>
+<p>Provides a base kit to simplify implementing, testing and managing Aras extensions.</p>
+<p>Aras extensions are written as a combination C# DLLs, server-methods (C#/VB), JavaScript and HTML,
+as well as database objects such as custom properties, fields, actions et.al.</p>
+<p>The scripts and tools found here allows developers to import, export, implement,
+build, test and deploy Aras Extensions with relative ease.</p>
+<p>In particular, features can be developed, tested and deployed on different environemnts/databased,
+like dev, test and production separately.</p>
+<h3 id="how-do-i-get-set-up">How do I get set up?</h3>
+<h4 id="summary-of-set-up">Summary of set up</h4>
+<ul>
+<li>Start VisualStudio.cmd</li>
+<li>Optional: enter your Aras login/password to allow unit tests and import/export, just press enter to skip.</li>
+<li>Code and run tests from Visual Studio.</li>
+<li>Use &#39;arassync&#39; from command line to build release dll&#39;s and sync db data between repo and an Aras DB.</li>
+</ul>
+<p>You can also run just CommandPrompt.cmd to avoid starting Visual Studio.</p>
+<h4 id="command-line-tools">Command-line tools</h4>
+<p>The available commands for ArasSync.exe are: (run &#39;arasync help&#39; to see:)</p>
+<p>Advanced available commands are:</p>
+<pre><code>ExtractAll         - Extract all xml-tags specified in amlsync.json from AML and writes to on-disk code file
+ExtractAML         - Extract xml-tag from AML and writes to on-disk code file
+ForAll             - Runs an &#39;arassync&#39; command in every feature directory
+MergeAll           - Merges all xml-tags specified in amlsync.json from files into AML file
+MergeAML           - Updates an xml-tag in AML from on-disk code file
+ReplaceServerItems - Update the project&#39;s AML files with delete actions for relationships that exist in the database but not locally.
+UploadDoc          - Generates and uploads documentation from C#-sources for the current feature to the Aras Web Server bin/htmldoc/&lt;feature&gt; folder
+
+help &lt;name&gt;        - For help with one of the above commands
+</code></pre><p>Standard available commands are:</p>
+<pre><code>About       - Shows full license/copyright notice
+CopyDLL     - Builds and copies DLLs &amp; docs for the current feature to the Aras Web Server bin folder
+Deploy      - Deploy the current directory&#39;s feature into the Aras instance
+Export      - Exports the current directory&#39;s feature from Aras database to disk
+ImportAML   - Imports the current directory&#39;s AML from local disc into an Aras database
+ImportFiles - Upload the current feature&#39;s server files from local disc into the Aras installation directory
+ImportXml   - Imports the current directory&#39;s XML fragments from local disc into an Aras installation directory
+ListDB      - List Aras instances specified in arasdb.json file(s)
+Login       - Asks user for Aras name/password and stores encrypted on disk.
+LoginStatus - Returns 0 (ok) if user is logged in or 1 if not.
+Logout      - Removes login information previously stored on disk.
+RunAML      - Run an AML query on the database
+
+help &lt;name&gt; - For help with one of the above commands
+</code></pre><h4 id="dependencies">Dependencies</h4>
+<ul>
+<li>Aras Innovator PLM (SP9 DLLs included here, but feel free to replace with your own. The IOM interface doesn&#39;t change much).</li>
+<li>Visual Studio 2017 / 2019</li>
+<li>Git</li>
+<li>Optional: Jetbrains ReSharper VS addin (for formatting &amp; style help)</li>
+<li>Optional: EditorConfig VS addin (for consistent indentation)  - <a href="http://editorconfig.org/">http://editorconfig.org/</a></li>
+</ul>
+<h4 id="database-configuration">Database configuration</h4>
+<p>arasdb.json &amp; arasdb-local.json defines Aras instances (Web browser HTTP URL, IIS server folder and SQL database name)</p>
+<p>A single instance is defined to be used as the developer instance,
+which is were unit tests fetch data and integeration test methods are executed.</p>
+<p>Create arasdb-local.json if you have user-specific Aras databases/instances to test with, such as on your own computer.</p>
+<h4 id="how-to-run-tests">How to run tests</h4>
+<ul>
+<li>Run &#39;arassync login&#39; and enter login/password if required.</li>
+<li>Run Scripts\UnitTests.cmd (though most talk to the server)</li>
+</ul>
+<p>You can also run them from within Visual Studio by right-clicking a project and choose &quot;Run Unit Tests&quot;, if it has any tests in it..</p>
+<p>Tests aare currently a mix of MSTest and NUnit framework, but we plan to migrate fully to NUnit.</p>
+<h4 id="deployment-instructions">Deployment instructions</h4>
+<ul>
+<li>Run &#39;arassync deploy --db=[DBID]&#39; to build and copy DLLs to web application</li>
+<li><p>Run &#39;arassync import --db=[DBID]&#39; to update database objects</p>
+<p>Use &#39;arassync forall &lt;command&gt; &lt;args&gt;&#39; to run a command for all features (i.e subdirs with &#39;amlsync.json&#39;) in repo.</p>
+</li>
+</ul>
+<h3 id="contributing">Contributing</h3>
+<p>TODO: Tell the community how they can contribute to your project.</p>
+<ol>
+<li>Fork it!</li>
+<li>Create your feature branch: git checkout -b my-new-feature</li>
+<li>Commit your changes: git commit -am &#39;Add some feature&#39;</li>
+<li>Push to the branch: git push origin my-new-feature</li>
+<li>Submit a pull request</li>
+</ol>
+<h4 id="guidelines">Guidelines</h4>
+<p>Use EditorConfig and Resharper to get a consistent formatting.</p>
+<p>To get good and consistent logging and automated error handling, server methods should
+inherit ArasMethod and use the custom ApplyXXX methods.</p>
+<h4 id="tests">Tests</h4>
+<p>Add unit tests and/or integration tests using MS Unittest Framework or NUnit (the latter is preferred).</p>
+<p>Test classes that talk to Aras should:</p>
+<ul>
+<li>inherit BitAddict.Aras.Test.ArasUnitTestBase and reimplement ClassInitialize/ClassCleanup.</li>
+<li>or, inherit BitAddict.Aras.Test.ArasNUnitTestBase and reimplement ClassInitialize/ClassCleanup tagged with [SetUp]/[TearDown].</li>
+</ul>
+<p>Tests that require code on the server should be categorized as &quot;IntegrationTests&quot;.</p>
+<h3 id="credits--responsibles">Credits / Responsibles</h3>
+<ul>
+<li>Marcus Sonestedt (marcus.lindblom.sonestedt@bitaddict.se)</li>
+<li>Jimmy Börjesson (jimmy.borjesson@bitaddict.se)</li>
+<li><p>Daniel Jonsson (daniel.jonsson@bitaddict.se)</p>
+</li>
+<li><p>Per Olsson (per.olsson@consilium.se)</p>
+</li>
+<li>Victor Stensson (victor.stensson@cpacsystems.se)</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
