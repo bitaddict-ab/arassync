@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CopyDllInfo
+    <title>Class DeployDllCommand
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CopyDllInfo
+    <meta name="title" content="Class DeployDllCommand
    ">
     <meta name="generator" content="docfx 2.42.0.0">
     
@@ -147,10 +147,10 @@
                             <a href="BitAddict.Aras.ArasSync.Commands.AboutCommand.html" title="AboutCommand" class="">AboutCommand</a>
                           </li>
                           <li class="">
-                            <a href="BitAddict.Aras.ArasSync.Commands.CopyDllCommand.html" title="CopyDllCommand" class="">CopyDllCommand</a>
-                          </li>
-                          <li class="">
                             <a href="BitAddict.Aras.ArasSync.Commands.DeployCommand.html" title="DeployCommand" class="">DeployCommand</a>
+                          </li>
+                          <li class="active">
+                            <a href="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.html" title="DeployDllCommand" class="active">DeployDllCommand</a>
                           </li>
                           <li class="">
                             <a href="BitAddict.Aras.ArasSync.Commands.ExportCommand.html" title="ExportCommand" class="">ExportCommand</a>
@@ -245,8 +245,26 @@
                           <li class="">
                             <a href="BitAddict.Aras.Data.ArasDb.html" title="ArasDb" class="">ArasDb</a>
                           </li>
-                          <li class="active">
-                            <a href="BitAddict.Aras.Data.CopyDllInfo.html" title="CopyDllInfo" class="active">CopyDllInfo</a>
+                          <li class="">
+                            <a href="BitAddict.Aras.Data.DeployDllInfo.html" title="DeployDllInfo" class="">DeployDllInfo</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="BitAddict.Aras.ExternalUrlWidget.html" title="BitAddict.Aras.ExternalUrlWidget" class="">BitAddict.Aras.ExternalUrlWidget</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="BitAddict.Aras.ExternalUrlWidget.GetExternalUrlMethod.html" title="GetExternalUrlMethod" class="">GetExternalUrlMethod</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="BitAddict.Aras.ExternalUrlWidget.UnitTests.html" title="BitAddict.Aras.ExternalUrlWidget.UnitTests" class="">BitAddict.Aras.ExternalUrlWidget.UnitTests</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="BitAddict.Aras.ExternalUrlWidget.UnitTests.TestGetExternalUrlMethod.html" title="TestGetExternalUrlMethod" class="">TestGetExternalUrlMethod</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -298,38 +316,57 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BitAddict.Aras.Data.CopyDllInfo">
+            <article class="content wrap" id="_content" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand">
   
   
-  <h1 id="BitAddict_Aras_Data_CopyDllInfo" data-uid="BitAddict.Aras.Data.CopyDllInfo" class="text-break">Class CopyDllInfo
+  <h1 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand" class="text-break">Class DeployDllCommand
   </h1>
-  <div class="markdown level0 summary"><p>Configures copyDLL command with extensions and exclusions</p>
+  <div class="markdown level0 summary"><p>Build and copies DLLs</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">CopyDllInfo</span></div>
+    <div class="level1"><span class="xref">ManyConsole.Internal.ConsoleUtil</span></div>
+    <div class="level2"><span class="xref">ManyConsole.ConsoleCommand</span></div>
+    <div class="level3"><span class="xref">DeployDllCommand</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="BitAddict.Aras.Data.html">BitAddict.Aras.Data</a></h6>
-  <h6><strong>Assembly</strong>: BitAddict.Aras.dll</h6>
-  <h5 id="BitAddict_Aras_Data_CopyDllInfo_syntax">Syntax</h5>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">ManyConsole.Internal.ConsoleUtil.VerifyNumberOfArguments(System.String[], System.Nullable&lt;System.Int32&gt;, System.Nullable&lt;System.Int32&gt;)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="BitAddict.Aras.ArasSync.Commands.html">BitAddict.Aras.ArasSync.Commands</a></h6>
+  <h6><strong>Assembly</strong>: ArasSync.dll</h6>
+  <h5 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[UsedImplicitly]
-public class CopyDllInfo</code></pre>
+public class DeployDllCommand : ConsoleCommand</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand__ctor_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.#ctor*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand__ctor" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.#ctor">DeployDllCommand()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeployDllCommand()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="BitAddict_Aras_Data_CopyDllInfo_Excludes_" data-uid="BitAddict.Aras.Data.CopyDllInfo.Excludes*"></a>
-  <h4 id="BitAddict_Aras_Data_CopyDllInfo_Excludes" data-uid="BitAddict.Aras.Data.CopyDllInfo.Excludes">Excludes</h4>
-  <div class="markdown level1 summary"><p>Does not copy files with these fragments in the name</p>
-</div>
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Build_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Build*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Build" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Build">Build</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Excludes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Build { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -341,21 +378,20 @@ public class CopyDllInfo</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="BitAddict_Aras_Data_CopyDllInfo_Extensions_" data-uid="BitAddict.Aras.Data.CopyDllInfo.Extensions*"></a>
-  <h4 id="BitAddict_Aras_Data_CopyDllInfo_Extensions" data-uid="BitAddict.Aras.Data.CopyDllInfo.Extensions">Extensions</h4>
-  <div class="markdown level1 summary"><p>Copies these extensions only</p>
-</div>
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_BuildConfig_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.BuildConfig*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_BuildConfig" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.BuildConfig">BuildConfig</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Extensions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string BuildConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,11 +403,157 @@ public class CopyDllInfo</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Confirm_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Confirm*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Confirm" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Confirm">Confirm</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Confirm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Database_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Database*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Database" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Database">Database</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Database { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Dir_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Dir*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Dir" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Dir">Dir</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Dir { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Doc_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Doc*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Doc" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Doc">Doc</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Doc { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Run_" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Run*"></a>
+  <h4 id="BitAddict_Aras_ArasSync_Commands_DeployDllCommand_Run_System_String___" data-uid="BitAddict.Aras.ArasSync.Commands.DeployDllCommand.Run(System.String[])">Run(String[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Run(string[] remainingArguments)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">remainingArguments</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ManyConsole.ConsoleCommand.Run(System.String[])</span></div>
 </article>
           </div>
           
