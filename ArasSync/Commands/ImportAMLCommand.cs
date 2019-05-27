@@ -37,6 +37,9 @@ namespace BitAddict.Aras.ArasSync.Commands
             var loginInfo = Common.RequireLoginInfo();
             var featureName = Common.GetFeatureName();
 
+            // This goes into innovator.DATABASEUPGRADE.TARGET_RELEASE which is an nvarchar(32) column
+            gitInfo = gitInfo.Substring(0, Math.Min(gitInfo.Length, 32));
+
             // merge AML before import into aras
             new MergeAllCommand {AmlSyncFile = AmlSyncFile}.Run(new string[] { });
 
