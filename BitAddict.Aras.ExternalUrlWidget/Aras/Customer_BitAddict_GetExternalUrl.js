@@ -99,7 +99,7 @@ Aras.prototype.uiPopulateInfoTableWithItem = function (sourceItm, doc) {
     const link = doc.getElementById("bitaddict_externalurl_link");
 
     if (!link) {
-        span.innerHTML += ` <a id='bitaddict_externalurl_link' href='${url}' onclick='${onclick}'>🔗</a>`;
+        span.innerHTML += ` <a title='Copy item URL to clipboard' id='bitaddict_externalurl_link' href='${url}' onclick='${onclick}'>🔗</a>`;
 
         fetch("../customer/BitAddict_GetExternalUrl_Snackbar.html", { cache: "reload" })
             .then(r => r.text())
