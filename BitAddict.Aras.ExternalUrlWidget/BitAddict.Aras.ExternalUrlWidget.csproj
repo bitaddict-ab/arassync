@@ -68,10 +68,9 @@
   <ItemGroup>
     <Content Include="ArasExport\GetExternalUrl\Import\Method\BitAddict_GetExternalUrl.xml" />
     <Content Include="ArasExport\GetExternalUrl\Import\Method\BitAddict_GetExternalUrl_Clicked.xml" />
-    <Content Include="ArasExport\PLM\Import\Form\Document.xml" />
-    <Content Include="ArasExport\PLM\Import\Form\CAD.xml" />
     <Content Include="ArasExport\PLM\Import\Form\Part.xml" />
-    <Content Include="Aras\Form_BitAddict_GetExternalUrl_Snackbar.html" />
+    <Content Include="Aras\Customer_BitAddict_GetExternalUrl.js" />
+    <Content Include="Aras\BitAddict_GetExternalUrl_Snackbar.html" />
     <Content Include="Aras\Method_BitAddict_GetExternalUrl_Clicked.js" />
   </ItemGroup>
   <ItemGroup>

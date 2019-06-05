@@ -37,7 +37,7 @@ namespace BitAddict.Aras.ArasSync.Data
     }
 
     [UsedImplicitly]
-    public class ClientFile
+    public class ServerFile
     {
         [UsedImplicitly] public string Local { get; set; }
         [UsedImplicitly] public string Remote { get; set; }
@@ -54,8 +54,8 @@ namespace BitAddict.Aras.ArasSync.Data
             = new List<XmlFragment>();
 
         [UsedImplicitly]
-        public List<ClientFile> ServerFiles { get; set; }
-            = new List<ClientFile>();
+        public List<ServerFile> ServerFiles { get; set; }
+            = new List<ServerFile>();
 
         /// <summary>
         /// Local directory of manifest file
