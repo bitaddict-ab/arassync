@@ -1,11 +1,11 @@
 {
   "DevelopmentInstance": "LOCAL",
-  "instances": [
+  "Instances": [
     {
-      "id": "LOCAL",
-      "url": "http://localhost/innovatorServer",
-      "dbname": "InnovatorSample",
-      "binFolder": "C:\\Program Files (x86)\\Aras\\Innovator"
+      "Id": "LOCAL",
+      "Url": "http://localhost/innovatorServer",
+      "Dbname": "InnovatorSample",
+      "BinFolder": "C:\\Program Files (x86)\\Aras\\Innovator"
     }
   ],
   "DeployDll": {
