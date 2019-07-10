@@ -78,7 +78,12 @@ which is were unit tests fetch data and integration test methods are executed.
 
 Create arasdb-local.json if you have user-specific Aras databases/instances to test with, such as on your own computer.
 
-An aras-db.json typically looks like this: (It can/should changed in your local company's fork.)
+An aras-db.json typically looks like this:
+
+* It can/should changed in your local company's fork.)
+* The example server shares the folder Aras from it's local C:\\Program Files (x86)\\Aras 
+
+(
 
 ```json
 {
@@ -94,13 +99,13 @@ An aras-db.json typically looks like this: (It can/should changed in your local 
       "Id": "PRODUCTION",
       "Url": "http://aras.mycompany.local/ArasProd/",
       "DbName": "ArasProduction",
-      "BinFolder": "\\aras.mycompany.local\\Aras\\ArasProd\\Innovator" - Aras is shared from C:\\Program Files (x86)\\Aras on server
+      "BinFolder": "\\aras.mycompany.local\\Aras\\ArasProd\\Innovator" 
     },
     {
       "Id": "TEST",
       "Url": "http://aras.mycompany.local/ArasTest/",
       "DbName": "ArasTest",
-      "BinFolder": "\\aras.mycompany.local\\Aras\\ArsasTest\\Innovator" - Aras is shared from C:\\Program Files (x86)\\Aras on server
+      "BinFolder": "\\aras.mycompany.local\\Aras\\ArsasTest\\Innovator"
     }
   ],
   "DeployDll": {
