@@ -1,4 +1,4 @@
-@echo off
+@echo on
 setlocal enabledelayedexpansion
 
 REM https://github.com/Microsoft/vswhere
@@ -7,14 +7,16 @@ set VSWHERE=%~dp0\..\bin\vswhere.exe
 REM VS2017-VS2019
 set VSVERSION=[15.0,17.0)
 
-if NOT %MSBUILD%x==x (
-    if EXIST %MSBUILD% (
-        goto done
-    )
+if "%MSBUILD%x"=="x" goto locate
 
-    ECHO MsBuild.exe not found at %MSBUILD%
-    SET MSBUILD=
+if EXIST "%MSBUILD%" (
+    goto done
 )
+
+ECHO MsBuild.exe not found at %MSBUILD%
+SET MSBUILD=
+
+:locate
 
 echo.
 echo Locating latest Visual Studio of version %VSVERSION% using %VSWHERE%
