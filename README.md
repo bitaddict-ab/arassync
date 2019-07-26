@@ -14,7 +14,7 @@ See COPYING.TXT for full license/copyright information.
 
 ### Quick summary
 
-Provides a base kit to simplify implementing, testing and managing Aras extensions.
+A command-line tool and a C# library that simplifies implementing, testing and managing Aras extensions.
 
 Aras extensions are written as a combination C# DLLs, server-methods (C#/VB), JavaScript and HTML,
 as well as database objects such as custom properties, fields, actions et.al.
