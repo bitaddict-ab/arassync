@@ -7,7 +7,8 @@ Code is developed & maintained by Bit Addict AB, but copyright belongs to:
 * Consilium Marine & Safety AB
 * CPAC Systems AB
 
-This code has been developed, paid for and generously licensed under the MIT license by the above companies
+This code has been developed, paid for and generously licensed under the MIT license by the above companies.
+
 See COPYING.TXT for full license/copyright information.
 
 ## What is this repository for?
