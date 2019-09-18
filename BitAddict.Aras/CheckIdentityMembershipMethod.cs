@@ -1,4 +1,6 @@
 ﻿// MIT License, see COPYING.TXT
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Aras.IOM;
@@ -34,32 +36,65 @@ namespace BitAddict.Aras
             userAlias.setProperty("source_id", userId);
             userAlias = Innovator.ApplyItem(userAlias);
 
-            var ids = new List<string> {userAlias.getProperty("related_id")};
+            var identityId = userAlias.getProperty("related_id");
+            return Innovator.newResult(CheckIfMemberOfIdentity(identityId) ? "true" : "false");
+        }
 
-            // not the fastest, but it works.
-            // should be optimized by asking for batches of identities.
-            // (see below for fast recursive SQL .. that Aras doesn't permit in ApplySQL.)
-            while (ids.Any())
+        /// <summary>
+        /// Check if an identity ID is a member of the identity with name `IdentityName`.
+        ///
+        /// Also takes into account the from and end dates for an identity membership.
+        /// </summary>
+        /// <param name="identityId">The identity ID to check if it is a member of identity with name `IdentityName`.</param>
+        private bool CheckIfMemberOfIdentity(string identityId)
+        {
+            var identityIds = new List<Tuple<string, DateTime, DateTime>>
+                {new Tuple<string, DateTime, DateTime>(identityId, DateTime.MinValue, DateTime.MaxValue)};
+
+            while (identityIds.Any())
             {
-                var id = ids.Last();
-                ids.RemoveAt(ids.Count - 1);
+                var identityIdTuple = identityIds.Last();
+                identityIds.RemoveAt(identityIds.Count - 1);
+                identityId = identityIdTuple.Item1;
+                var fromDate = identityIdTuple.Item2;
+                var endDate = identityIdTuple.Item3;
 
-                var identityItem = Innovator.newItem("Identity", "get");
-                identityItem.setAttribute("select", "keyed_name");
+                var identityItems = Innovator.newItem("Identity", "get");
+                identityItems.setAttribute("select", "keyed_name");
 
-                var memberRelation = identityItem.createRelationship("Member", "get");
-                memberRelation.setAttribute("select", "keyed_name");
-                memberRelation.setProperty("related_id", id);
-                identityItem = Innovator.ApplyItem(identityItem);
+                var memberRelation = identityItems.createRelationship("Member", "get");
+                memberRelation.setAttribute("select", "id, from_date, end_date");
+                memberRelation.setProperty("related_id", identityId);
+                identityItems = Innovator.ApplyItem(identityItems);
 
-                if (identityItem.Enumerate()
-                    .Any(i => i.getProperty("keyed_name") == IdentityName))
-                    return Innovator.newResult("true");
+                foreach (var identityItem in identityItems.Enumerate())
+                {
+                    var memberItem = identityItem.getRelationships().getItemByIndex(0);
+                    var newFromDate = MaxDateTime(fromDate, memberItem.getProperty("from_date")?.ToDateTime());
+                    var newEndDate = MinDateTime(endDate, memberItem.getProperty("end_date")?.ToDateTime());
 
-                ids.AddRange(identityItem.Enumerate().Select(i => i.getID()));
+                    if (identityItem.getProperty("keyed_name") == IdentityName && DateTime.Now >= newFromDate &&
+                        DateTime.Now <= newEndDate)
+                        return true;
+
+                    identityIds.Add(
+                        new Tuple<string, DateTime, DateTime>(identityItem.getID(), newFromDate, newEndDate));
+                }
             }
 
-            return Innovator.newResult("false");
+            return false;
+        }
+
+        private static DateTime MinDateTime(DateTime d1, DateTime? d2)
+        {
+            if (d2 == null) return d1;
+            return d1 < d2.Value ? d1 : d2.Value;
+        }
+
+        private static DateTime MaxDateTime(DateTime d1, DateTime? d2)
+        {
+            if (d2 == null) return d1;
+            return d1 > d2.Value ? d1 : d2.Value;
         }
 
         /* Aras returns no result for the recursive query below. :(
@@ -108,5 +143,13 @@ namespace BitAddict.Aras
             WHERE keyed_name = @identityName
        END
         */
+    }
+
+    internal static class CheckIdentityMembershipMethodExtensions
+    {
+        public static DateTime? ToDateTime(this string str)
+        {
+            return DateTime.Parse(str);
+        }
     }
 }
