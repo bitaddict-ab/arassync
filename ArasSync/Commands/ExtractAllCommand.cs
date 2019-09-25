@@ -39,6 +39,9 @@ namespace BitAddict.Aras.ArasSync.Commands
                 // ReSharper disable once AssignNullToNotNullAttribute
                 var amlFile = Path.Combine(data.LocalDirectory, aml.AmlFile);
 
+                if (!File.Exists(amlFile))
+                    continue;
+
                 var doc = new XmlDocument();
                 doc.Load(amlFile);
 
