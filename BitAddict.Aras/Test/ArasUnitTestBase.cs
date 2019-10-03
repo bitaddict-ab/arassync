@@ -8,8 +8,8 @@ using Aras.Common.Compression;
 using Aras.IOM;
 using BitAddict.Aras.Data;
 using BitAddict.Aras.Security;
+using JetBrains.Annotations;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MSTestHacks;
 using Newtonsoft.Json;
 
 namespace BitAddict.Aras.Test
@@ -17,8 +17,14 @@ namespace BitAddict.Aras.Test
     /// <summary>
     /// Base class for Aras unit tests using Microsofts UnitTestFramework
     /// </summary>
-    public class ArasUnitTestBase : TestBase
+    public class ArasUnitTestBase
     {
+        /// <summary>
+        /// Instantiated automatically by MSTest.
+        /// </summary>
+        [UsedImplicitly]
+        public TestContext TestContext { get; set; }
+
         /// <summary>
         /// Current Innovator instance, use to talk to aras. Connects to DevelopmentInstance DB
         /// </summary>

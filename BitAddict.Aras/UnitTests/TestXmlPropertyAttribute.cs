@@ -105,7 +105,7 @@ namespace BitAddict.Aras.UnitTests
         public void TestMissingRequiredThrows()
         {
             _doc.LoadXml("<body></body>");
-            ExceptionAssert.Throws<XmlException>(() =>
+            Assert.ThrowsException<XmlException>(() =>
                 XmlPropertyAttribute.BindXml(_doc.DocumentElement, _objReq));
         }
 
@@ -113,7 +113,7 @@ namespace BitAddict.Aras.UnitTests
         public void TestUnknownElementNameThrows()
         {
             _doc.LoadXml("<body><fail>indeed</fail></body>");
-            ExceptionAssert.Throws<XmlException>(() =>
+            Assert.ThrowsException<XmlException>(() =>
                 XmlPropertyAttribute.BindXml(_doc.DocumentElement, _objReq));
         }
     }
