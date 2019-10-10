@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Xml;
 using Aras.IOM;
@@ -296,7 +297,26 @@ namespace BitAddict.Aras
         /// <returns></returns>
         public static Item Apply(this Item item, bool logResult = true)
         {
+            if (item.getInnovator() is MockInnovator mock)
+            {
+                var action = item.getAction()?.ToLower();
+                switch (action)
+                {
+                    case "update":
+                        return mock.UpdateMockItem(item);
+                }
+            }
             return Innovator.ApplyItem(item, logResult);
+        }
+
+        /// <summary>
+        /// Get the names of the item's properties.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static IEnumerable<string> GetProperties(this Item item)
+        {
+            return item.node.ChildNodes.OfType<XmlNode>().Select(n => n.Name);
         }
 
         /// <summary>
@@ -354,6 +374,37 @@ namespace BitAddict.Aras
 
             if (result.isError() && result.isEmpty())
                 throw new ArasException(result) { Source = $"{itemType} id: '{id}'" };
+
+            return result;
+        }
+
+        /// <summary>
+        /// Run and log Innovator.newItem() query.
+        /// </summary>
+        /// <param name="innovator">Innovator object.</param>
+        /// <param name="itemTypeName">Item type name.</param>
+        /// <param name="action">Action.</param>
+        /// <returns></returns>
+        public static Item NewItem(this Innovator innovator, string itemTypeName, string action)
+        {
+            Log($"<{nameof(NewItem)}>\n  <input>\n    type = '{itemTypeName}', action = '{action}'\n  </input>\n");
+
+            var result = innovator is MockInnovator mock
+                ? LogTime(() =>
+                {
+                    var item = mock.newItem(itemTypeName, action);
+                    item.GetType().GetField("parentInnovator", BindingFlags.NonPublic | BindingFlags.Instance)?.SetValue(item, innovator);
+                    return item;
+                }, "QueryTime")
+                : LogTime(() => innovator.newItem(itemTypeName, action), "QueryTime");
+
+            var xml = FormatXml(result.node ?? result.dom.DocumentElement);
+            Log($"  <Result>\n{xml}\n  </Result>\n" +
+                $"  <Count>{result.getItemCount()}</Count>\n" +
+                $"</{nameof(NewItem)}>\n");
+
+            if (result.isError() && result.isEmpty())
+                throw new ArasException(result) { Source = $"{itemTypeName} action: '{action}'" };
 
             return result;
         }

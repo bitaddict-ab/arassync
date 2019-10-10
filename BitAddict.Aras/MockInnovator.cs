@@ -28,6 +28,28 @@ namespace BitAddict.Aras
         }
 
         /// <summary>
+        /// Update an item in the mock list.
+        /// </summary>
+        /// <param name="item"></param>
+        public Item UpdateMockItem(Item item)
+        {
+            _mockItems.TryGetValue(item.getID(), out var storedItem);
+            if (storedItem == null)
+            {
+                AddMockItem(item);
+            }
+            else
+            {
+                foreach (var propertyName in item.GetProperties())
+                {
+                    storedItem.setProperty(propertyName, item.getProperty(propertyName));
+                }
+            }
+
+            return storedItem;
+        }
+
+        /// <summary>
         /// Return mock item by id if found, otherwise hit database
         /// </summary>
         /// <param name="itemType"></param>
