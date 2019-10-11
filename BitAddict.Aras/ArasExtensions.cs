@@ -302,6 +302,13 @@ namespace BitAddict.Aras
                 var action = item.getAction()?.ToLower();
                 switch (action)
                 {
+                    case "get":
+                        var i = mock.GetMockItem(item.getType(), item.getID());
+                        if (i != null)
+                        {
+                            return i;
+                        }
+                        break;
                     case "update":
                         return mock.UpdateMockItem(item);
                 }

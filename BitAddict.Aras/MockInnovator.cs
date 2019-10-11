@@ -50,6 +50,20 @@ namespace BitAddict.Aras
         }
 
         /// <summary>
+        /// Get an item from the mock list.
+        /// </summary>
+        /// <param name="itemType"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Item GetMockItem(string itemType, string id)
+        {
+            return _mockItems
+                .Where(tuple => tuple.Key == id && tuple.Value.getType() == itemType)
+                .Select(tuple => tuple.Value)
+                .FirstOrDefault();
+        }
+
+        /// <summary>
         /// Return mock item by id if found, otherwise hit database
         /// </summary>
         /// <param name="itemType"></param>
