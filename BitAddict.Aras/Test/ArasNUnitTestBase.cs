@@ -130,7 +130,7 @@ namespace BitAddict.Aras.Test
         /// Closes connection 
         /// </summary>
         [OneTimeTearDown]
-        public static void ClassCleanup()
+        public static void OneTimeTearDown()
         {
             if (--_connectionCount > 0)
                 return;
