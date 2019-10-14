@@ -28,10 +28,42 @@ namespace BitAddict.Aras
         }
 
         /// <summary>
+        /// Apply an item.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public Item Apply(Item item)
+        {
+            var action = item.getAction()?.ToLower();
+            switch (action)
+            {
+                case "get":
+                {
+                    var i = GetMockItem(item.getType(), item.getID());
+                    if (i != null)
+                    {
+                        return i;
+                    }
+                    break;
+                }
+                case "update":
+                {
+                    var i = UpdateMockItem(item);
+                    if (i != null)
+                    {
+                        return i;
+                    }
+                    break;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Update an item in the mock list.
         /// </summary>
         /// <param name="item"></param>
-        public Item UpdateMockItem(Item item)
+        private Item UpdateMockItem(Item item)
         {
             _mockItems.TryGetValue(item.getID(), out var storedItem);
             if (storedItem == null)
@@ -55,7 +87,7 @@ namespace BitAddict.Aras
         /// <param name="itemType"></param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Item GetMockItem(string itemType, string id)
+        private Item GetMockItem(string itemType, string id)
         {
             return _mockItems
                 .Where(tuple => tuple.Key == id && tuple.Value.getType() == itemType)

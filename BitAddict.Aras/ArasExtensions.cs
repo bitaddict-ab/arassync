@@ -269,11 +269,13 @@ namespace BitAddict.Aras
         /// <exception cref="ArasException"></exception>
         [NotNull]
         // ReSharper disable once UnusedParameter.Global
-        public static Item ApplyItem(this Innovator _, [NotNull] Item item, bool logResult = true)
+        public static Item ApplyItem(this Innovator innovator, [NotNull] Item item, bool logResult = true)
         {
             Log($"<ApplyItem logresult='{logResult}'>\n  <input>\n{FormatXml(item.node)}\n  </input>\n");
 
-            var result = LogTime(item.apply, "QueryTime");
+            var result = innovator is MockInnovator mock
+                ? mock.Apply(item) ?? item.apply()
+                : LogTime(item.apply, "QueryTime");
 
             if (logResult)
             {
@@ -299,18 +301,10 @@ namespace BitAddict.Aras
         {
             if (item.getInnovator() is MockInnovator mock)
             {
-                var action = item.getAction()?.ToLower();
-                switch (action)
+                var i = mock.Apply(item);
+                if (i != null)
                 {
-                    case "get":
-                        var i = mock.GetMockItem(item.getType(), item.getID());
-                        if (i != null)
-                        {
-                            return i;
-                        }
-                        break;
-                    case "update":
-                        return mock.UpdateMockItem(item);
+                    return i;
                 }
             }
             return Innovator.ApplyItem(item, logResult);
