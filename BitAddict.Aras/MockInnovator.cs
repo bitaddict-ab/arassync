@@ -39,6 +39,21 @@ namespace BitAddict.Aras
             {
                 case "get":
                 {
+                    // Rudimentary support for fetching all generations of an item
+                    if (item.getProperty("generation") == "1" && item.getPropertyCondition("generation") == "ge")
+                    {
+                        var allItems = _mockItems
+                            .Select(mockItem => mockItem.Value)
+                            .Where(mockItem => mockItem.getType() == item.getType());
+                        var collection = this.NewItem(item.getType());
+                        foreach (var mockItem in allItems)
+                        {
+                            collection.appendItem(mockItem);
+                        }
+                        return collection;
+                    }
+
+                    // Get items normally
                     var i = GetMockItem(item.getType(), item.getID());
                     if (i != null)
                     {

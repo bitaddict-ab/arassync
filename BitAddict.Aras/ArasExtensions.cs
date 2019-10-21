@@ -383,6 +383,27 @@ namespace BitAddict.Aras
         /// Run and log Innovator.newItem() query.
         /// </summary>
         /// <param name="innovator">Innovator object.</param>
+        /// <returns></returns>
+        public static Item NewItem(this Innovator innovator)
+        {
+            return innovator.NewItem(null, null);
+        }
+
+        /// <summary>
+        /// Run and log Innovator.newItem() query.
+        /// </summary>
+        /// <param name="innovator">Innovator object.</param>
+        /// <param name="itemTypeName">Item type name.</param>
+        /// <returns></returns>
+        public static Item NewItem(this Innovator innovator, string itemTypeName)
+        {
+            return innovator.NewItem(itemTypeName, null);
+        }
+
+        /// <summary>
+        /// Run and log Innovator.newItem() query.
+        /// </summary>
+        /// <param name="innovator">Innovator object.</param>
         /// <param name="itemTypeName">Item type name.</param>
         /// <param name="action">Action.</param>
         /// <returns></returns>
