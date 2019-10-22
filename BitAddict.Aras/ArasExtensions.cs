@@ -640,5 +640,34 @@ namespace BitAddict.Aras
                 throw new ArasException("Aras login failed: " + loginItem.getErrorString());
             return loginItem.getInnovator();
         }
+
+        /// <summary>
+        /// Get a part's thumbnail URL.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns>The thumbnail URL.</returns>
+        [CanBeNull]
+        public static string GetThumbnailUrl(this Item item)
+        {
+            var thumbnailId = item.GetThumbnailId();
+            return thumbnailId == null ? null : Innovator.getFileUrl(thumbnailId, UrlType.SecurityToken);
+        }
+
+        /// <summary>
+        /// Get a part's thumbnail ID. The thumbnail property value might be
+        /// `vault:///?fileId=328FA00B6D054F788D71ABE1AA6A2AE0`, and this function extracts only the ID string.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns>The thumbnail ID.</returns>
+        [CanBeNull]
+        public static string GetThumbnailId(this Item item)
+        {
+            var thumbnailUri = item.getProperty("thumbnail");
+            if (string.IsNullOrWhiteSpace(thumbnailUri))
+                return null;
+            var regex = new Regex(@"vault:///\?fileId=");
+            var thumbnailId = regex.Replace(thumbnailUri, "");
+            return thumbnailId;
+        }
     }
 }
