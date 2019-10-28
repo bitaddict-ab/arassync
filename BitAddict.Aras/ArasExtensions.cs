@@ -312,6 +312,20 @@ namespace BitAddict.Aras
         }
 
         /// <summary>
+        /// Get the file URL from a file ID.
+        /// </summary>
+        /// <param name="innovator"></param>
+        /// <param name="fileId"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static string GetFileUrl(this Innovator innovator, string fileId, UrlType type)
+        {
+            return innovator is MockInnovator mock
+                ? mock.getFileUrl(fileId, type)
+                : innovator.getFileUrl(fileId, type);
+        }
+
+        /// <summary>
         /// Get the names of the item's properties.
         /// </summary>
         /// <param name="item"></param>
@@ -651,7 +665,7 @@ namespace BitAddict.Aras
         public static string GetThumbnailUrl(this Item item)
         {
             var thumbnailId = item.GetThumbnailId();
-            return thumbnailId == null ? null : Innovator.getFileUrl(thumbnailId, UrlType.SecurityToken);
+            return thumbnailId == null ? null : Innovator.GetFileUrl(thumbnailId, UrlType.SecurityToken);
         }
 
         /// <summary>

@@ -13,6 +13,7 @@ namespace BitAddict.Aras
     public class MockInnovator : Innovator
     {
         private readonly Dictionary<string, Item> _mockItems = new Dictionary<string, Item>();
+        private readonly Dictionary<string, string> _mockFileUrls = new Dictionary<string, string>();
 
         /// <inheritdoc/>
         public MockInnovator(IServerConnection serverConnection) : base(serverConnection)
@@ -25,6 +26,16 @@ namespace BitAddict.Aras
         public void AddMockItem(Item item)
         {
             _mockItems[item.getID()] = item;
+        }
+
+        /// <summary>
+        /// Add a file url to the mock file urls list.
+        /// </summary>
+        /// <param name="fileId"></param>
+        /// <param name="fileUrl"></param>
+        public void AddFileUrl(string fileId, string fileUrl)
+        {
+            _mockFileUrls[fileId] = fileUrl;
         }
 
         /// <summary>
@@ -132,6 +143,17 @@ namespace BitAddict.Aras
         {
             var item = _mockItems.Values.FirstOrDefault(i => i.getProperty("keyed_name") == keyedName);
             return item ?? base.getItemByKeyedName(itemType, keyedName);
+        }
+
+        /// <summary>
+        /// Get mock file URL if found, otherwise hit the database.
+        /// </summary>
+        /// <param name="fileId"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public new string getFileUrl(string fileId, UrlType type)
+        {
+            return _mockFileUrls.ContainsKey(fileId) ? _mockFileUrls[fileId] : base.getFileUrl(fileId, type);
         }
     }
 }
