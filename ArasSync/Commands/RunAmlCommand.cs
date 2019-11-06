@@ -44,7 +44,7 @@ namespace BitAddict.Aras.ArasSync.Commands
                 arasDb.Url, arasDb.DbName,
                 loginInfo.Username, loginInfo.Password);
 
-            connection.Timeout = 15000;
+            connection.Timeout = 2 * 60 * 1000;
             connection.Compression = CompressionType.deflate;
 
             var loginItem = connection.Login();
